@@ -1,6 +1,9 @@
 from django.urls import path
 
 from usuarios import views
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
     path('subi_tu_post/', views.subi_tu_post),
@@ -11,3 +14,5 @@ urlpatterns = [
     path('change_password/', views.change_password),
     path('mi_busqueda/', views.mi_busqueda),
 ]
+
+urlpatterns+=static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

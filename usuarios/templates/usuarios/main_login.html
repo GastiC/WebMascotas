@@ -1,0 +1,38 @@
+{% extends "index.html" %}
+
+{% block title %} Registrarse {% endblock %}
+
+{% block content %} 
+<br>
+<div class="container.fluid mt-4" style="background:url(https://s1.1zoom.me/b5050/420/429416-svetik_2560x1440.jpg); 
+width: 100%; height: 550px; background-repeat: no-repeat;background-size: cover; position: relative;" >
+
+<div style="background-color: rgba(12, 12, 12, 0.7); width: 100%; height: 550px; position: absolute;" >
+  <p style="color: white; font-size: 70px; padding-top: 300px; text-align: center; font-weight: 500; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> Bienvenido "x" usuario</p>
+
+</div>
+</div>
+<div class="container mt-4 mb-4">
+
+<div class="row">
+    <div class="col-3"> </div>
+    <div class="col-6">
+        <h3 style="text-align: center;">¿Que deseas hacer?</h3>
+      <div class="list-group" id="list-tab" role="tablist">
+        <a class="btn btn-outline-dark " id="list-home-list" style="margin-bottom: 10px;" href="/change_password/" role="tab" >Cambiar contraseña</a>
+        <a class="btn btn-outline-dark" id="list-profile-list" style="margin-bottom: 10px;" href="/subi_tu_post/" >Publicar una búsqueda</a>
+        <a class="btn btn-outline-dark" id="list-messages-list" style="margin-bottom: 10px;" href="/mi_busqueda/" >Mi búsqueda</a>
+        <a class="btn btn-outline-dark" id="list-settings-list" style="margin-bottom: 10px;" href="/adoptar_una_mascota/" >Adoptar una mascota</a>
+        <a class="btn btn-outline-dark" id="list-settings-list" style="margin-bottom: 10px;" href="/home/" >Cerrar sesión</a>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+{% endblock %}

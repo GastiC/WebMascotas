@@ -1,0 +1,79 @@
+{% extends "index.html" %}
+
+{% block title %} Contacto {% endblock %}
+
+{% block content %} 
+<br>
+<div class="container.fluid mt-4" style="background:url(https://s1.1zoom.me/b5050/420/429416-svetik_2560x1440.jpg); 
+width: 100%; height: 550px; background-repeat: no-repeat;background-size: cover; position: relative;" >
+
+<div style="background-color: rgba(12, 12, 12, 0.7); width: 100%; height: 550px; position: absolute;" >
+    <p style="color: white; font-size: 70px; padding-top: 300px; text-align: center; font-weight: 500; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif    ;"> Contactate con nosotros</p>
+
+</div>
+</div>
+<div class="container col-md-6 pt-4" style="background-color:white; color: black; ">
+<form action="/home/">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <input type="text" class="form-control" id="inputName" placeholder="Nombre*">
+      </div>
+      <div class="form-group col-md-6 ">
+        <input type="text" class="form-control" id="inputSurname" placeholder="Apellido*">
+      </div>
+      
+      </div>        
+    <div class="form-row">
+        <div class="form-group col-md-6">
+          <input type="email" class="form-control" id="inputEmail" placeholder="Correo electrónico*">
+        </div>
+        <div class="form-group col-md-6">
+          <input type="email" class="form-control" id="inputEmail2" placeholder="Repita correo electrónico*">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <input type="text" class="form-control" id="inputAreaCode"placeholder="Cód.Área*">
+      </div>
+      <div class="form-group col-md-4">
+        <input type="text" class="form-control" id="inputTel" placeholder="Teléfono*">
+      </div>
+        <div class="form-group col-md-6 ">
+          <input type="number" class="form-control" id="inputCel" placeholder="Celular">
+        </div>
+        </div>  
+      <div class="form-row">
+        <div class="form-group col-md-6">
+            <input type="text" class="form-control" id="inputAddress" placeholder= "Domicilio*">
+        </div>
+        <div class="form-group col-md-4">
+            <input type="text" class="form-control" id="inputCity"placeholder="Localicad*">
+        </div>
+        <div class="form-group col-md-2">
+          <input type="text" class="form-control" id="inputZip" placeholder="C.P*">
+        </div>
+        <div class="form-group col-md-12">
+         <textarea class="form-control" id="textAreaComments" rows="4" placeholder="Ingrese su consulta...*"></textarea>
+        </div>
+    </div>
+    <p style="font-weight:lighter; color:#141414";>Los campos con (*) son obligatorios</p>  
+    <div class="form-group">
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="dropdownCheck">
+        <label class="form-check-label" for="dropdownCheck">
+          Deseo que se comuniquen telefónicamente
+        </label>
+      </div>
+    </div>
+    <div class="container text-center">
+    <button type="submit" class="btn btn-dark btn-lg " style="width: 200px;" id="enviar" onclick="alerta()">Enviar</button>
+  </div>
+  </form>
+  <br>
+</div>
+<p id="gasti">Holaaa</p>
+
+<br>
+
+{% endblock %}
+
