@@ -7,35 +7,35 @@ from django.contrib.auth.models import User
 
 def home (request):
     
-    return render(request, "home.html")
+    return render(request, "principal/home.html")
 
 def busquedas(request):
 
-    return render(request , "busquedas.html")
+    return render(request , "principal/busquedas.html")
 
 
 def refugios(request):
 
-    return render(request, "refugios.html")
+    return render(request, "principal/refugios.html")
 
 def contacto(request):
 
-    return render(request, "contacto.html")
+    return render(request, "principal/contacto.html")
 
 #footer
 
 def preguntas_frecuentes(request):
 
-    return render(request, "footer/preguntas_frecuentes.html")
+    return render(request, "principal/preguntas_frecuentes.html")
 
 def terminos_y_condiciones(request):
 
-    return render(request, "footer/terminos_y_condiciones.html")
+    return render(request, "principal/terminos_y_condiciones.html")
 
 def quienes_somos(request):
 
-    return render(request, "footer/quienes_somos.html")    
+    return render(request, "principal/quienes_somos.html")    
 
 def informacion(request):
 
-    return render(request, "informacion.html")
+    return render(request, "principal/informacion.html")

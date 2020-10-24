@@ -58,7 +58,7 @@ ROOT_URLCONF = 'webMascotas.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/Users/Gastón Colaneri/Desktop/Gasti/Python/WebMascotas/webMascotas/'],
+        'DIRS': ['C:/Users/Gastón Colaneri/Desktop/Gasti/Python/WebMascotas/webMascotas'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

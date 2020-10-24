@@ -7,11 +7,11 @@ from django.contrib.auth.models import User
 
 def subi_tu_post(request):
 
-    return render(request, "subi_tu_post.html")
+    return render(request, "usuarios/subi_tu_post.html")
 
 def login_view(request):
    
-    return render(request, "login/login.html")
+    return render(request, "usuarios/login.html")
 
 def sign_in(request):
 
@@ -39,21 +39,21 @@ def sign_in(request):
         else:
             return render(request, 'login/sign_in.html', {'error': 'Las contraseñas no coinciden'})"""
      
-    return render(request, "login/sign_in.html")
+    return render(request, "usuarios/sign_in.html")
 
 def reset_password(request):
 
-    return render(request, "login/reset_password.html")
+    return render(request, "usuarios/reset_password.html")
 
 
 def main_login(request):
 
-    return render(request, "login/main_login.html")
+    return render(request, "usuarios/main_login.html")
 
 def change_password(request):
 
-    return render(request, "login/change_password.html")  
+    return render(request, "usuarios/change_password.html")  
 
 def mi_busqueda(request):
 
-    return render(request, "login/mi_busqueda.html")
+    return render(request, "usuarios/mi_busqueda.html")
