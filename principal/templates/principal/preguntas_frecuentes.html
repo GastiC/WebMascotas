@@ -1,16 +1,14 @@
 {% extends "principal/index.html" %}
+{% load static %}
 
 {% block title %} Refugios {% endblock %}
 
 {% block content %} 
 
 <br>
-<br>
-<br>
-<br>
-<p style="color: whitesmoke;">Lo que quiera que esté en la página de preguntas frecuentes </p>
-<br>
-<br>
-<br>
-<br>
+<div class="container.fluid mt-4" >
+  <img src="{% static 'principal/img/429416-svetik_2560x1440.jpg' %}" class="imagen_banner"> 
+<div class="fondo_banner">
+    <p class="texto_banner"> Preguntas frecuentes</p>
+</div>
 {% endblock %}

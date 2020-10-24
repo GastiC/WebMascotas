@@ -1,14 +1,15 @@
 {% extends "principal/index.html" %}
+{% load static %}
 
-{% block title %} Refugios {% endblock %}
+{% block title %} Información {% endblock %}
 
 {% block content %} 
 <br>
-<div class="container.fluid mt-4" style="background:url(https://s1.1zoom.me/b5050/420/429416-svetik_2560x1440.jpg); 
-width: 100%; height: 550px; background-repeat: no-repeat;background-size: cover; position: relative;" >
-
-<div style="background-color: rgba(12, 12, 12, 0.7); width: 100%; height: 550px; position: absolute;" >
-  <p style="color: white; font-size: 70px; padding-top: 300px; text-align: center; font-weight: 500; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> Información</p>
+<div class="container.fluid mt-4" >
+  <img src="{% static 'principal/img/429416-svetik_2560x1440.jpg' %}" class="imagen_banner"> 
+<div class="fondo_banner">
+    <p class="texto_banner"> Información</p>
+</div>
 
 </div>
 </div>

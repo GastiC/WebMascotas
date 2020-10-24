@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login
+from refugios.models import Refugio
 
 #Models
 from django.contrib.auth.models import User
@@ -15,8 +16,8 @@ def busquedas(request):
 
 
 def refugios(request):
-
-    return render(request, "principal/refugios.html")
+    refugios = Refugio.objects.all()
+    return render(request, "principal/refugios.html",{'refugios': refugios})
 
 def contacto(request):
 
