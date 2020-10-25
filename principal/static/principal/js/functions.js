@@ -1,7 +1,7 @@
 var eventoUno = document.getElementById("#enviar");
 
 function alerta(){
-    alert("Holaaaaa");
+    alert("Gracias por contactarte con nosotros");
 };
 
 eventoUno.addEventListener("oneclick", alerta)
