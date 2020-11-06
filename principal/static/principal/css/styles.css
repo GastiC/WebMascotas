@@ -27,7 +27,7 @@
 .texto_banner{
     color: white; 
     font-size: 50px; 
-    padding-top: 270px; 
+    padding-top: 240px; 
     text-align: center; 
     font-weight: 500; 
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -35,43 +35,42 @@
 
 .imagen_home{
     width: 100%; 
+    height: 700px;
+    
 }
 
 .presentacion {
     background-color: rgba(12, 12, 12, 0.7);
 }
 
-@media all and (max-width: 399px) {
-    .imagen_home{
-        height: 250px; 
-
-    }
-    .imagen_banner {
-        height: 250px; 
-    }
+.quienes_somos{
+    text-align: center;
 }
 
-@media all and (min-width: 400px) and (max-width: 600px) {
-    .imagen_home{
-        height: 350px; 
-    }
-    .imagen_banner {
-        height: 200px; 
-    }
+.imagen_quienes_somos {
+    box-sizing: border-box;
+    width: 100%;
+    height: 15em; 
 }
 
-@media all and (min-width: 601px) and (max-width: 1023px) {
-    .imagen_home{
-        height: 350px; 
-    }
-    .imagen_banner {
-        height: 400px; 
-    }
+.staff {
+    border-style: solid;
+    border-radius: 200px;
 }
 
-@media all and (min-width: 1024px) {
 
+
+
+@media (max-width: 576px) {
     .imagen_home{
-        height: 700px; 
+         height: 250px;        
     }
 }
+@media (min-width: 577px) and (max-width: 1200px) {
+    .imagen_home{
+        height: 400px;                
+   }
+   
+}
+
+
