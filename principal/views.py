@@ -10,11 +10,6 @@ def home (request):
     
     return render(request, "principal/home.html")
 
-def busquedas(request):
-
-    return render(request , "principal/busquedas.html")
-
-
 def refugios(request):
     refugios = Refugio.objects.all()
     return render(request, "principal/refugios.html",{'refugios': refugios})

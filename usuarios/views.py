@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login
+from usuarios.models import Busqueda
 
 #Models
 from django.contrib.auth.models import User
@@ -57,3 +58,8 @@ def change_password(request):
 def mi_busqueda(request):
 
     return render(request, "usuarios/mi_busqueda.html")
+
+def busquedas(request):
+
+    busquedas = Busqueda.objects.all()
+    return render(request , "usuarios/busquedas.html", {'busquedas': busquedas})

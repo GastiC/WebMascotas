@@ -1,0 +1,54 @@
+{% extends "principal/index.html" %}
+{% load static %}
+{% block title %} Busquedas {% endblock %}
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+
+
+<div class="container mt-4 mb-4" >
+  <div class="card-deck">
+      {% for busqueda in busquedas %}
+        <div class="col-md-4 mt-3 mb-3">
+        <div class="card">
+            <img src="{{busqueda.foto.url}}" class="card-img busqueda_foto" alt="...">
+            <div class="card-body">
+              <h3 class="card-title">{{busqueda.nombreMascota}}</h3>
+              <h5 class="card-title">{{busqueda.raza}}</h5>
+              <h6 class="card-title">{{busqueda.categoria}}</h6>
+              <p class="card-text">{{busqueda.descripcion}}</p>
+              <p class="card-text"><small class="text-muted">{{busqueda.creado}}</small></p>
+            </div>
+          </div>  
+        </div>
+          {% endfor %}
+      
+        </div>
+        </div>
+
+
+
+<br>
+<br>
+<br>
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+{% endblock %}

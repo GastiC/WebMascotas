@@ -13,6 +13,8 @@ urlpatterns = [
     path('main_login/', views.main_login),
     path('change_password/', views.change_password),
     path('mi_busqueda/', views.mi_busqueda),
+    path('busquedas/', views.busquedas),
+
 ]
 
 urlpatterns+=static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

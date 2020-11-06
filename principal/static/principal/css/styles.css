@@ -59,7 +59,10 @@
 }
 
 
-
+.busqueda_foto {
+    width: 100%;
+    height: 15em;
+}
 
 @media (max-width: 576px) {
     .imagen_home{
@@ -70,7 +73,7 @@
     .imagen_home{
         height: 400px;                
    }
-   
+
 }
 
 
