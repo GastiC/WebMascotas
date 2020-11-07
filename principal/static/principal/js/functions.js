@@ -1,8 +1,13 @@
-var eventoUno = document.getElementById("#enviar");
+let formulario = document.getElementById("formulario_contacto");
 
-function alerta(){
-    alert("Gracias por contactarte con nosotros");
-};
+function formulario_contacto(e) {
+    e.preventDefault();
+    let elementos = formulario.elements
+    for (let i = 0; i < elementos.length; i++) {
+        const element = elementos[i].value;
+        console.log(element);
 
-eventoUno.addEventListener("oneclick", alerta)
+    }
+}
 
+formulario.addEventListener("submit", formulario_contacto)
