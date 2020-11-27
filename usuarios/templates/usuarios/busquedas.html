@@ -19,10 +19,10 @@
         <div class="card">
             <img src="{{busqueda.foto.url}}" class="card-img busqueda_foto" alt="...">
             <div class="card-body">
-              <h3 class="card-title">{{busqueda.nombreMascota}}</h3>
-              <h5 class="card-title">{{busqueda.raza}}</h5>
-              <h6 class="card-title">{{busqueda.categoria}}</h6>
-              <p class="card-text">{{busqueda.descripcion}}</p>
+              <h3 class="card-title">{{busqueda.nombreMascota | capfirst }}</h3>
+              <h5 class="card-title">{{busqueda.raza | title }}</h5>
+              <h6 class="card-title">{{busqueda.categoria | capfirst}}</h6>
+              <p class="card-text">{{busqueda.descripcion | capfirst}}</p>
               <p class="card-text"><small class="text-muted">{{busqueda.creado}}</small></p>
             </div>
           </div>  

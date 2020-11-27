@@ -17,6 +17,8 @@ class Busqueda(models.Model):
     celular = models.IntegerField(null=True, blank=True)
     usuario = models.ForeignKey(User, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.nombreMascota
 
 class Usuario(models.Model):
     nombre = models.CharField(max_length=40)
@@ -31,3 +33,6 @@ class Usuario(models.Model):
     confirmacionEmail = models.EmailField()
     password = models.CharField(max_length=30)
     confirmacionPassword = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.email

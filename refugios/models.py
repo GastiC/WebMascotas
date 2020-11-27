@@ -14,3 +14,6 @@ class Refugio(models.Model):
     instagram = models.CharField(max_length=40, blank=True, null = True)
     foto_refugio = models.ImageField(upload_to="refugios")
     descripcion = models.TextField()
+
+    def __str__(self):
+        return self.nombre

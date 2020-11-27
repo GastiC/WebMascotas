@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login
 from refugios.models import Refugio
+from .forms import ContactoForm
 
 #Models
 from django.contrib.auth.models import User
@@ -22,8 +23,17 @@ def informacion_refugios(request, id):
 
 
 def contacto(request):
+    contacto = ContactoForm()
 
-    return render(request, "principal/contacto.html")
+    if request.method == 'POST':
+        formulario = ContactoForm(data=request.POST)
+        if formulario.is_valid():
+            formulario.save()
+        else:
+            contacto = formulario
+
+
+    return render(request, "principal/contacto.html", {'contacto': contacto})
 
 #footer
 
