@@ -8,8 +8,16 @@ from .forms import ContactoForm
 from django.contrib.auth.models import User
 
 def home (request):
-    
-    return render(request, "principal/home.html")
+    contacto = ContactoForm()
+
+    if request.method == 'POST':
+        formulario = ContactoForm(data=request.POST)
+        if formulario.is_valid():
+            formulario.save()
+        else:
+            contacto = formulario
+            
+    return render(request, "principal/home.html", {'contacto': contacto})
 
 def refugios(request):
     refugios = Refugio.objects.all()
@@ -31,6 +39,7 @@ def contacto(request):
             formulario.save()
         else:
             contacto = formulario
+
 
 
     return render(request, "principal/contacto.html", {'contacto': contacto})

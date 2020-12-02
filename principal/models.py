@@ -7,7 +7,7 @@ class Contacto(models.Model):
     nombre = models.CharField(max_length=50) 
     apellido = models.CharField(max_length=50) 
     email = models.EmailField()
-    confirmacionEmail = models.EmailField(verbose_name="Confirmación Correo ")
+    confirmacionEmail = models.EmailField(verbose_name="Confirmación Email")
     codigoArea = models.IntegerField(verbose_name="Código de área")
     telefono = models.IntegerField(verbose_name="Teléfono")
     celular = models.IntegerField(null=True, blank=True)

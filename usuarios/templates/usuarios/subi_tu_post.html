@@ -2,8 +2,8 @@
 {% load static %}
 
 {% block title %} Subí tu búsqueda {% endblock %}
-
 {% block content %} 
+{% load crispy_forms_tags %}
 <br>
 <div class="container mt-4 contenedor_imagen" >  
   <div class="texto_banner">
@@ -11,7 +11,22 @@
   </div>
 <img src="{% static 'principal/img/429416-svetik_2560x1440.jpg' %}" class="imagen_banner">
 </div>
+<div class="container col-md-6 pt-4" style="background-color:white; color: black; ">
+  <form action="", method="POST", enctype="multipart/form-data">
+    {% csrf_token %}
+    <div>
+      <div class="form-row">        
+        <div class="col">
+          {{ busqueda | crispy }}
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-dark btn-lg " style="width: 200px;">Enviar</button>   
+  </form>
+</div>
 
+
+<!--
 <div class="container col-md-6 pt-4" style="background-color:white; color: black; ">
 <form>
     <div class="form-row">
@@ -75,5 +90,7 @@
   <br>
 </div>
 <br>
+
+!-->
 
 {% endblock %}

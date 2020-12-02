@@ -15,7 +15,7 @@ class Busqueda(models.Model):
     codigoArea = models.IntegerField()
     telefono = models.IntegerField()
     celular = models.IntegerField(null=True, blank=True)
-    usuario = models.ForeignKey(User, on_delete=models.CASCADE)
+    usuario = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return self.nombreMascota

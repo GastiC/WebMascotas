@@ -2,13 +2,21 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login
 from usuarios.models import Busqueda
-
+from .forms import BusquedaForm
 #Models
 from django.contrib.auth.models import User
 
 def subi_tu_post(request):
+    busqueda = BusquedaForm()
+    if request.method == 'POST':
+        formulario = BusquedaForm(data=request.POST, files=request.FILES)
+        if formulario.is_valid():
+            formulario.save()
+        else:
+            busqueda = formulario
 
-    return render(request, "usuarios/subi_tu_post.html")
+    return render(request, "usuarios/subi_tu_post.html", {'busqueda': busqueda})
+
 
 def login_view(request):
    

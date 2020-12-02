@@ -10,4 +10,4 @@ function formulario_contacto(e) {
     alert("Muchas gracias por contactarte con nosotros")
 }
 
-formulario.addEventListener("submit", formulario_contacto)
+//formulario.addEventListener("submit", formulario_contacto)

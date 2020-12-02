@@ -2,9 +2,9 @@
 {% load static %}
 {% block title %} Home {% endblock %}
 {% block content %} 
+{% load crispy_forms_tags %}
 <br>
 
-</div>
     <div id="myCarousel" class="carousel slide pt-4" data-interval="4000" data-ride="carousel" style="height: 80%;" >
         <!-- Carousel indicators -->
         <ol class="carousel-indicators">
@@ -56,6 +56,26 @@
 
 </div>
 <h1 style="text-align: center;">Contactanos </h1>
+
+<div class="container col-md-6 pt-4" style="background-color:white; color: black; ">
+
+  <form action="" method="POST" id="formulario_contacto" >
+
+    {% csrf_token %}
+    <div class="form-row">
+      <div class="col">
+          {{ contacto | crispy }}
+          <button type="submit" class="btn btn-dark btn-lg " style="width: 200px;" id="enviar"; >Enviar</button>
+      </div>
+    </div>
+    <br>
+    {{mensaje}}
+  </form>
+
+</div>
+
+
+<!--     
 <div class="container col-md-6 pt-4" style="background-color:white; color: black; ">
     <form action="/home/">
         <div class="form-row">
@@ -120,5 +140,5 @@
       alert("Se envió exitósamente");
     };
     </script>
-
+-->
 {% endblock %}
