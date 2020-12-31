@@ -12,6 +12,7 @@ class Busqueda(models.Model):
     creado = models.DateTimeField(auto_now_add=True)
     provincia = models.CharField(max_length=40)
     localidad = models.CharField(max_length=40)
+    cp = models.IntegerField(verbose_name="Código Postal")
     codigoArea = models.IntegerField()
     telefono = models.IntegerField()
     celular = models.IntegerField(null=True, blank=True)

@@ -18,3 +18,10 @@ class Contacto(models.Model):
 
     def __str__(self):
         return self.email
+
+class Newsletter(models.Model):
+    email = models.EmailField()
+    creado = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.email

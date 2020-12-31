@@ -2,21 +2,20 @@ from django import forms
 from .models import Refugio
 
 class RefugioForm(forms.ModelForm):
-    nombre = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-group col-md-6' })) 
-    direccion = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-group col-md-6'})) 
+    nombre = forms.CharField()
+    direccion = forms.CharField(label="Domicilio",) 
     email = forms.EmailInput()
     confirmacionEmail = forms.EmailInput()
-    codigoArea = forms.IntegerField()
+    codigoArea = forms.IntegerField(label="Prefijo",)
     telefono = forms.IntegerField()
-    celular = forms.IntegerField()
-    domicilio = forms.CharField()
+    celular = forms.IntegerField(required=False)
     localidad = forms.CharField()
     provincia = forms.CharField()
-    cp = forms.CharField()
-    facebook = forms.CharField()
-    instagram = forms.CharField()
+    cp = forms.CharField(label="C.P",)
+    facebook = forms.CharField(required=False)
+    instagram = forms.CharField(required=False)
     foto_refugio = forms.ImageField()
-    descripcion = forms.TextInput()
+    descripcion = forms.CharField(widget=forms.Textarea(attrs={'rows':5}))
 
     class Meta:
         model = Refugio

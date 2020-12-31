@@ -12,23 +12,78 @@
 <img src="{% static 'principal/img/429416-svetik_2560x1440.jpg' %}" class="imagen_banner">
 </div>
 
-<div class="container col-md-6 pt-4" style="background-color:white; color: black; ">
-  
-  <form action="" method="POST" enctype="multipart/form-data" >
+<div class="container col-md-6 pt-4 mb-4 formulario_contacto" >
+
+  <form action="" method="POST"  enctype="multipart/form-data" class="pb-4">
+
     {% csrf_token %}
-    {{refugio | crispy}}
+    <div class="form-row">
+      <div class="form-group col-md-6 mb-0">
+          {{ refugio.nombre | as_crispy_field }}
+      </div>
+      <div class="form-group col-md-6 mb-0">
+        {{ refugio.foto_refugio | as_crispy_field }}
+    </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6 mb-0">
+          {{ refugio.email | as_crispy_field }}
+      </div>
+      <div class="form-group col-md-6 mb-0">
+          {{ refugio.confirmacionEmail | as_crispy_field }}
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-2 mb-0">
+          {{ refugio.codigoArea | as_crispy_field }}
+      </div>
+      <div class="form-group col-md-5 mb-0">
+          {{ refugio.telefono | as_crispy_field }}
+      </div>
+      <div class="form-group col-md-5 mb-0">
+        {{ refugio.celular | as_crispy_field }}
+    </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-4 mb-0">
+          {{ refugio.direccion | as_crispy_field }}
+      </div>
+      <div class="form-group col-md-3 mb-0">
+          {{ refugio.localidad | as_crispy_field }}
+      </div>
+      <div class="form-group col-md-2 mb-0">
+        {{ refugio.cp | as_crispy_field }}
+    </div>
+    <div class="form-group col-md-3 mb-0">
+      {{ refugio.provincia | as_crispy_field }}
+    </div>
+    </div>
 
 
-    <button type="submit" class="btn btn-dark btn-lg " style="width: 200px;">Enviar</button>
+    <div class="form-row">
+      <div class="form-group col-md-6 mb-0">
+          {{ refugio.facebook | as_crispy_field }}
+      </div>
+      <div class="form-group col-md-6 mb-0">
+          {{ refugio.instagram | as_crispy_field }}
+      </div>
+    </div>
+    
+    <div class="form-row">
+      <div class="form-group col-md-12 mb-0">
+          {{ refugio.descripcion | as_crispy_field }}
+      </div>
+    </div>
+
+    <div class="container text-center">
+    <button type="submit" class="btn btn-dark btn-md text-center" style="width: 100px;" id="enviar"; >Enviar</button>
+    </div>
+    {{mensaje}}
   </form>
-  {{mensaje}}
-
-  <br>
-  <br>
-
 </div>
-
-
 
 
 

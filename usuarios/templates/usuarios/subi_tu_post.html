@@ -14,18 +14,64 @@
 
 
 <div class="container col-md-6 pt-4" style="background-color:white; color: black; ">
-  <form action="", method="POST", enctype="multipart/form-data">
+  <form action="" method="POST"  enctype="multipart/form-data" class="pb-4">
     {% csrf_token %}
-    <div>
-      <div class="form-row">        
-        <div class="col">
-          {{ busqueda | crispy }}
-        </div>
+    <div class="form-row">
+      <div class="form-group col-md-6 mb-0">
+        {{ busqueda.nombreMascota | as_crispy_field }}
+      </div>
+      <div class="form-group col-md-3 mb-0">
+        {{ busqueda.categoria | as_crispy_field }}
+      </div>
+      <div class="form-group col-md-3 mb-0">
+        {{ busqueda.raza | as_crispy_field }}
       </div>
     </div>
-    <button type="submit" class="btn btn-dark btn-lg " style="width: 200px;">Enviar</button>   
-  </form>
-</div>
+
+
+    <div class="form-row">
+      <div class="form-group col-md-2 mb-0">
+          {{ busqueda.codigoArea | as_crispy_field }}
+      </div>
+      <div class="form-group col-md-5 mb-0">
+          {{ busqueda.telefono | as_crispy_field }}
+      </div>
+      <div class="form-group col-md-5 mb-0">
+        {{ busqueda.celular | as_crispy_field }}
+    </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-5 mb-0">
+        {{ busqueda.localidad | as_crispy_field }}
+      </div>
+      <div class="form-group col-md-2 mb-0">
+        {{ busqueda.cp | as_crispy_field }}
+      </div>
+      <div class="form-group col-md-5 mb-0">
+        {{ busqueda.provincia | as_crispy_field }}
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-12 mb-0">
+          {{ busqueda.descripcion | as_crispy_field }}
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-12 mb-0">
+          {{ busqueda.foto | as_crispy_field }}
+      </div>
+    </div>
+
+    <div class="container text-center">
+    <button type="submit" class="btn btn-dark btn-md text-center" style="width: 100px;" id="enviar"; >Enviar</button>
+    </div>
+    {{mensaje}}
+    </form>
+    </div>
+
 
 
 <!--

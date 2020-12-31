@@ -1,5 +1,5 @@
 from django import forms
-from .models import Contacto
+from .models import Contacto,Newsletter
 from crispy_forms.helper import FormHelper
 
 class ContactoForm(forms.ModelForm):
@@ -18,3 +18,10 @@ class ContactoForm(forms.ModelForm):
     class Meta:
         model = Contacto
         fields = '__all__'
+
+class NewsletterForm(forms.ModelForm):
+    email = forms.CharField(widget=forms.EmailInput(attrs={'type':"email", 'class':"form-control", 'placeholder':"Ingrese email", 'aria-label':"Recipient's username", 'aria-describedby':"button-addon2"}))
+    
+    class Meta:
+        model = Newsletter
+        fields = ['email',]

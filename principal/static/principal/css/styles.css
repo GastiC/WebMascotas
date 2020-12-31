@@ -1,3 +1,13 @@
+.asteriskField{
+    visibility: hidden !important;
+}
+
+#id_foto_refugio{
+    color: white !important;
+}
+#id_foto{
+    color: white !important;
+}
 .imagen_banner {
     width: 100%; 
     background-repeat:no-repeat;
@@ -135,6 +145,15 @@
 }
 
 
+.social_icons{
+    color: white;
+    margin-right: 15px;
+    font-size: 30px;
+
+}
+
+
+
 @media (max-width: 575px) {
     .imagen_banner {
         margin-top: 35px;
@@ -160,6 +179,9 @@
     }
     .formulario_contacto{
         text-align: center !important;
+    }
+    .social_icons{
+        margin-bottom: 30px !important;
     }
 
 }
@@ -195,13 +217,18 @@
     .fondo_banner {
     height: 240px;
 }
+    .social_icons{
+    font-size: 23px;
+    margin-right: 5px !important;
+}
 
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
     .imagen_home{
     margin-top: 18px;
-    height: 400px;                
+    height: 400px;  
+
 }
 
     .imagen_banner {
@@ -214,7 +241,10 @@
     .fondo_banner {
     height: 315px;
 }
-
+.social_icons{
+    font-size: 30px;
+    margin-right: 5px !important;
+}
 }
 
 @media (min-width: 1200px) {

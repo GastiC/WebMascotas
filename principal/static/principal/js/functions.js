@@ -11,3 +11,11 @@ function formulario_contacto(e) {
 }
 
 //formulario.addEventListener("submit", formulario_contacto)
+
+;
+
+function newsletter(e){
+    alert("Muchas gracias por suscribirte. En unos momentos recibirás un correo nuestro")
+}
+
+document.getElementById("button-addon2").addEventListener("submit", newsletter);

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Contacto
+from .models import Contacto, Newsletter
 from refugios.models import Refugio
 
 class RefugioAdmin(admin.ModelAdmin):
@@ -14,7 +14,12 @@ class ContactoAdmin(admin.ModelAdmin):
     list_filter = ['localidad',]
     list_per_page = 10
 
+class NewsletterAdmin(admin.ModelAdmin):
+    list_display = ['email','creado']
+    list_filter = ['creado',]
+    list_per_page = 10
 
 
 admin.site.register(Contacto, ContactoAdmin)
 admin.site.register(Refugio, RefugioAdmin)
+admin.site.register(Newsletter, NewsletterAdmin)

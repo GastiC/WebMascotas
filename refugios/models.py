@@ -3,13 +3,15 @@ from django.db import models
 class Refugio(models.Model):
 
     nombre = models.CharField(max_length=50)    
-    direccion = models.CharField(max_length=40)
+    direccion = models.CharField(max_length=40, verbose_name="Domicilio")
     cp = models.IntegerField(verbose_name="Código Postal")
     localidad = models.CharField(max_length=40)
     provincia = models.CharField(max_length=40)
-    tel = models.IntegerField(verbose_name="Teléfono")  
+    telefono = models.IntegerField(verbose_name="Teléfono")  
+    codigoArea = models.IntegerField(verbose_name="Prefijo")
+    celular = models.IntegerField(verbose_name="Celular")
     email = models.EmailField(verbose_name="Correo electrónico")
-    email_again = models.EmailField (verbose_name="Correo electrónico confirmado")
+    confirmacionEmail = models.EmailField (verbose_name="Repita Correo electrónico")
     facebook = models.CharField(max_length=40, blank=True, null = True)
     instagram = models.CharField(max_length=40, blank=True, null = True)
     foto_refugio = models.ImageField(upload_to="refugios")
