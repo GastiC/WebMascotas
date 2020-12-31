@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.core.paginator import Paginator
 from django.contrib.auth import authenticate, login
 from usuarios.models import Busqueda
 from .forms import BusquedaForm
@@ -70,4 +71,8 @@ def mi_busqueda(request):
 def busquedas(request):
 
     busquedas = Busqueda.objects.all()
-    return render(request , "usuarios/busquedas.html", {'busquedas': busquedas})
+    paginator = Paginator(busquedas, 6)
+
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)   
+    return render(request , "usuarios/busquedas.html", {'page_obj': page_obj, 'page_number': page_number})
