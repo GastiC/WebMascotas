@@ -20,8 +20,8 @@ class ContactoForm(forms.ModelForm):
         fields = '__all__'
 
 class NewsletterForm(forms.ModelForm):
-    email = forms.CharField(widget=forms.EmailInput(attrs={'type':"email", 'class':"form-control", 'placeholder':"Ingrese email", 'aria-label':"Recipient's username", 'aria-describedby':"button-addon2"}))
+    email_newsletter = forms.CharField(widget=forms.EmailInput(attrs={'type':"email", 'class':"form-control", 'placeholder':"Ingrese email", 'aria-label':"Recipient's username", 'aria-describedby':"button-addon2"}))
     
     class Meta:
         model = Newsletter
-        fields = ['email',]
+        fields = ['email_newsletter',]

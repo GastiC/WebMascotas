@@ -46,10 +46,10 @@
                 <form class="input-group mb-3" action="" method="post" id="id_newsletter">
                     {% csrf_token %}
                     <!-- <input type="email" class="form-control" placeholder="Ingrese email" aria-label="Recipient's username" aria-describedby="button-addon2"> -->
-                    {{ newsletter.email | as_crispy_field }}
+                    {{newsletter.email_newsletter | as_crispy_field }}
+                    <button class="boton_newsletter" type="submit" id="button-addon2" onclick="newsletter()"><i class="fas fa-chevron-circle-right"></i></button>
 
                     <div class="input-group-append">
-                      <button class="btn btn-dark" type="submit" id="button-addon2">Enviar</button>
                     </div>
                 </form>
 
@@ -57,22 +57,22 @@
 
                 <div class="container">
                 <a href="https://www.facebook.com/Encontra-a-tu-mascota-106295038071932/" target="_blank">
-                    <i class="fab fa-facebook-square social_icons"></i>
-                </a>                
-                <a href="https://www.instagram.com/encontraatumascota.ok/" target="_blank">
-                    <i class="fab fa-instagram social_icons"></i>
+                    <img src="{% static 'principal/img/facebook.png' %}" class="redes_iconos">
                 </a>
+                <a href="https://www.instagram.com/encontraatumascota.ok/" target="_blank">
+                    <img src="{% static 'principal/img/instagram.png' %}" class="redes_iconos">
+                </a>
+
                 <a href="https://api.whatsapp.com/send?phone=+541155913842" target="_blank">
-                    <i class="fab fa-whatsapp social_icons"></i>
+                    <img src="{% static 'principal/img/whatsapp.png' %}" class="redes_iconos">
                 </a>
                 <a href="mailto:encontraatumascota@gmail.com">
-                    <i class="fas fa-envelope social_icons"></i>
-                </a>
+                    <img src="{% static 'principal/img/email.png' %}" class="redes_iconos">
+                </a>                
                </div>
-
-
-
-                </div>
+            </div>
+        </div>
+        <br>
     </div>
 </footer>  
 

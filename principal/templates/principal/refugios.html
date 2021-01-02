@@ -13,30 +13,53 @@
 <img src="{% static 'principal/img/429416-svetik_2560x1440.jpg' %}" class="imagen_banner">
 </div>
 
-<div class="container mt-4 mb-4 ">
-    {% for refugio in refugios %}
-    <div class="row">
-        <div class="col-md-6">
-            <img src="{{refugio.foto_refugio.url}}" class="card-img" alt="..." style="height: 235px; margin-bottom: 20px;">
+<div class="container mt-4 mb-4" >
+        {% for refugio in page_obj %}
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{refugio.foto_refugio.url}}" class="card-img" alt="..." style="height: 235px; margin-bottom: 20px;">
+            </div>
+            <div class="col-md-6">
+                <div class="card col-md-12 " style="background-color: white; padding: 10px;">
+                <div class="card-body">
+                    <h3 class="card-title">{{refugio.nombre}} </h3>
+                    <p class="card-text" style="margin-bottom: 65px; font-size: 17px; ">
+                        {{refugio.descripcion}}
+                    </p>
+                    <a href='{{refugio.id}}/' class="btn btn-info" >Más información</a>
+                  </div>       
+                </div>         
+            </div>
         </div>
-        <div class="col-md-6">
-            <div class="card col-md-12 " style="background-color: white; padding: 10px;">
-            <div class="card-body">
-                <h3 class="card-title">{{refugio.nombre}} </h3>
-                <p class="card-text" style="margin-bottom: 65px; font-size: 17px; ">
-                    {{refugio.descripcion}}
-                </p>
-                <a href='{{refugio.id}}/' class="btn btn-info" >Más información</a>
-              </div>       
-            </div>            
-     
-        </div>
-
-</div>
-
-    {% endfor %}
-
-</div>
+        {% endfor %}
+        
+          </div>
+          </div>
+  
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <li class="page-item">
+        {% if page_obj.has_previous %}
+          <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+          <span aria-hidden="true">Anterior</span>
+          </a>
+        {% endif %}
+      </li>
+        
+        {% for i in page_obj.paginator.page_range %}
+        <li class="page-item">
+          <a class="page-link" href="?page={{ i }}"> {{ i }}</a>
+        </li>
+        {% endfor %}
+      <li class="page-item">
+        {% if page_obj.has_next %}
+        <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+          <span aria-hidden="true">Siguiente </span>
+        </a>
+        {% endif %}
+      </li>
+    </ul>
+  </nav>
 
 
 {% endblock %}

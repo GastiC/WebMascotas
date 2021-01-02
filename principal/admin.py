@@ -15,7 +15,7 @@ class ContactoAdmin(admin.ModelAdmin):
     list_per_page = 10
 
 class NewsletterAdmin(admin.ModelAdmin):
-    list_display = ['email','creado']
+    list_display = ['email_newsletter','creado']
     list_filter = ['creado',]
     list_per_page = 10
 

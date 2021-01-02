@@ -12,7 +12,8 @@ urlpatterns = [
     path('terminos_y_condiciones/', views.terminos_y_condiciones),
     path('quienes_somos/', views.quienes_somos),
     path('informacion/', views.informacion),
-    path('refugios/<id>/', views.informacion_refugios)
+    path('refugios/<id>/', views.informacion_refugios),
+    path('newsletter/', views.newsletter),
 ]
 
 urlpatterns+=static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

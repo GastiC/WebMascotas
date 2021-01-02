@@ -20,8 +20,8 @@ class Contacto(models.Model):
         return self.email
 
 class Newsletter(models.Model):
-    email = models.EmailField()
+    email_newsletter = models.EmailField()
     creado = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.email
+        return self.email_newsletter
