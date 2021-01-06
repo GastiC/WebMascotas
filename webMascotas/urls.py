@@ -24,6 +24,8 @@ urlpatterns = [
     path('', include('refugios.urls')),
     path('', include('usuarios.urls')),
     path('', include('ecomerce.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
+
 ] 
 
 if settings.DEBUG:

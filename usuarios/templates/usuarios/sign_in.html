@@ -2,17 +2,35 @@
 {% load static %}
 
 {% block title %} Registrarse {% endblock %}
-
 {% block content %} 
+
+{% load crispy_forms_tags %}
 
 <br>
 <div class="container mt-4 contenedor_imagen pr-0 " >  
   <div class="container text-center fondo_banner p-0">
-      <h1 class="texto_banner"> Contactate con nosotros</h1>
+      <h1 class="texto_banner"> Registrate</h1>
   </div>
 <img src="{% static 'principal/img/429416-svetik_2560x1440.jpg' %}" class="imagen_banner">
 </div>
 
+<div class="container col-md-4 pt-4" style="background-color: white;">
+  <form method="POST" action="{% url 'sign_in' %}">
+    {% csrf_token %}
+    
+    {{ nuevoUsuario | crispy }}
+
+
+      <div class="container text-center">
+      <button type="submit" class="btn btn-dark btn-lg " style="width: 150px;">Registrarse</button>
+      </div>
+    </form>
+    <br>
+  </div>
+  
+  <br>
+
+nuevoUsuario
 
 <div class="container col-md-4 pt-4" style="background-color: white;">
 <form method="POST" action="{% url 'sign_in' %}">

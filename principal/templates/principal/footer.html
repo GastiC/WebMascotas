@@ -12,10 +12,9 @@
                     
                         <h4 style="padding-bottom: 15px; color: #F2F0F2;">Sobre nosotros</h4>
                         <p style="color: rgb(136, 136, 136);" >
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Libero repellat illum culpa voluptatum mollitia dolores quae inventore molestias, 
-                            delectus minima ipsam reiciendis veritatis consequatur voluptatibus corporis repellendus id necessitatibus 
-                            eaque.</p>
+                            En esta página vas a poder publicar la búsqueda de tu mascota. 
+                            Nosotros vamos a intentar que te reencuentres con tu pequeño ser querido.
+                        </p>
                     </div>
                         <div class= "col-md-4-">
                             <ul style="list-style: none; padding-left: 15px">
@@ -40,7 +39,29 @@
                         </div>
                 </div>
             </div>                            
+            {% if request.path == '/accounts/login/' %}
+            <div class= "col-sm-12 col-md-3 col-lg-3 col-xl-3">
 
+            <h4 style="padding-bottom: 15px;color: #F2F0F2;"> Nuestras redes sociales</h4>
+
+            <div class="container">
+            <a href="https://www.facebook.com/Encontra-a-tu-mascota-106295038071932/" target="_blank">
+                <img src="{% static 'principal/img/facebook.png' %}" class="redes_iconos">
+            </a>
+            <a href="https://www.instagram.com/encontraatumascota.ok/" target="_blank">
+                <img src="{% static 'principal/img/instagram.png' %}" class="redes_iconos">
+            </a>
+
+            <a href="https://api.whatsapp.com/send?phone=+541155913842" target="_blank">
+                <img src="{% static 'principal/img/whatsapp.png' %}" class="redes_iconos">
+            </a>
+            <a href="mailto:encontraatumascota@gmail.com">
+                <img src="{% static 'principal/img/email.png' %}" class="redes_iconos">
+            </a>                
+           </div>
+            </div>
+
+            {% else %}
             <div class= "col-sm-12 col-md-3 col-lg-3 col-xl-3">
                 <h4 style="padding-bottom: 15px;color: #F2F0F2;"> Suscribite</h4>
                 <form class="input-group mb-3" action="" method="post" id="id_newsletter">
@@ -70,7 +91,9 @@
                     <img src="{% static 'principal/img/email.png' %}" class="redes_iconos">
                 </a>                
                </div>
-            </div>
+            </div>  
+            {% endif %}
+
         </div>
         <br>
     </div>

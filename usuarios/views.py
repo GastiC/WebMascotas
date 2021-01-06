@@ -1,9 +1,9 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.core.paginator import Paginator
 from django.contrib.auth import authenticate, login
 from usuarios.models import Busqueda
-from .forms import BusquedaForm
+from .forms import BusquedaForm, UserCreationForm
 from principal.forms import NewsletterForm
 #Models
 from django.contrib.auth.models import User
@@ -26,51 +26,26 @@ def subi_tu_post(request):
 
 def login_view(request):
 
-    newsletter = NewsletterForm()
-    if request.method == 'POST':
-        formularioNewsletter = NewsletterForm(data=request.POST)
-        if formularioNewsletter.is_valid():
-            formularioNewsletter.save()
-        else:
-            newsletter = formularioNewsletter  
-
-    return render(request, "usuarios/login.html",{'newsletter': newsletter})
+    return render(request, "principal/templates/registration/login.html")
 
 def sign_in(request):
-
-    """if request.method == 'POST':
-        username = request.POST ['nombre']
-        apellido = request.POST ['apellido']
-        direccion = request.POST ['direccion']
-        localidad = request.POST ['localidad']
-        cp = request.POST ['cp']
-        email = request.POST ['email']
-        email_again = request.POST ['email_again']
-        password = request.POST ['password']
-        password_confirmation = request.POST ['password_confirmation']
-
-        if password == password_confirmation:
-            user = User.object.create_user(username= email, password= password)
-            user.save()
-
-            usuario = Usuario(user=user)
-            usuario.save()
-            
-
-            return render(request, 'login/main_login.html',)
-
-        else:
-            return render(request, 'login/sign_in.html', {'error': 'Las contraseñas no coinciden'})"""
-
+    nuevoUsuario = UserCreationForm()
     newsletter = NewsletterForm()
+
     if request.method == 'POST':
         formularioNewsletter = NewsletterForm(data=request.POST)
+        formularioUsuario = UserCreationForm(data=request.POST)
         if formularioNewsletter.is_valid():
             formularioNewsletter.save()
+        elif formularioUsuario.is_valid():
+            formularioUsuario.save()
+            user = authenticate(username=formularioUsuario.cleaned_data['username'], password=formularioUsuario.cleaned_data['password1'])
+            login(request, user)
+            return redirect(to='../../main_login')
         else:
             newsletter = formularioNewsletter  
-
-    return render(request, "usuarios/sign_in.html", {'newsletter': newsletter})
+            nuevoUsuario = formularioUsuario
+    return render(request, "usuarios/sign_in.html", {'newsletter': newsletter, 'nuevoUsuario': nuevoUsuario})
 
 def reset_password(request):
     newsletter = NewsletterForm()

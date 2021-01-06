@@ -1,5 +1,8 @@
 from django import forms
 from .models import Busqueda
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
+
 
 class BusquedaForm(forms.ModelForm):
     nombreMascota = forms.CharField(widget=forms.TextInput(), label= 'Nombre de tu mascota') 
@@ -18,3 +21,9 @@ class BusquedaForm(forms.ModelForm):
     class Meta:
         model = Busqueda
         fields = ['nombreMascota','categoria','raza','localidad','provincia','codigoArea','telefono','celular','descripcion','foto','cp']
+
+class nuevoUsuario(UserCreationForm):
+    
+    class Meta:
+        model = User
+        fields = ['username','first_name', 'last_name','email','password1','password2']

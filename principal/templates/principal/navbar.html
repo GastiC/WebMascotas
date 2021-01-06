@@ -34,9 +34,18 @@
           <a class="nav-link subrayado" href="/subi_tu_post"><strong>Subí tu búsqueda</strong></a>
         </li>      
     </div>
+    {% if user.is_authenticated %}
     <form class="form-inline my-2 my-lg-0">
-      <a href="/login/" class="btn btn-dark my-2 my-sm-0 formato_boton_login"  type="button"><span class="boton_login">Ingresar </span> <i class="fas fa-sign-in-alt icono_login_navbar"></i></a>
+      <a href="{% url 'logout' %}" class="btn btn-dark my-2 my-sm-0 formato_boton_login"  type="button"><span class="boton_login">Cerrar sesión </span> <i class="fas fa-sign-in-alt icono_login_navbar"></i></a>
     </form>
+    {% else %}
+    <form class="form-inline my-2 my-lg-0">
+      <a href="{% url 'login' %}" class="btn btn-dark my-2 my-sm-0 formato_boton_login"  type="button"><span class="boton_login">Ingresar </span> <i class="fas fa-sign-in-alt icono_login_navbar"></i></a>
+    </form>
+    {% endif %}
+
+
+
   </div>
   </div>
 </nav>
