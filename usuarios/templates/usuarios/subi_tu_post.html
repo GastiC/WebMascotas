@@ -5,15 +5,15 @@
 {% block content %} 
 {% load crispy_forms_tags %}
 <br>
-<div class="container mt-4 contenedor_imagen pr-0 " >  
-  <div class="container text-center fondo_banner p-0">
+<div class="mt-4 contenedor_imagen pr-0 " >  
+  <div class="text-center fondo_banner p-0">
       <h1 class="texto_banner"> Subí tu búsqueda</h1>
   </div>
 <img src="{% static 'principal/img/429416-svetik_2560x1440.jpg' %}" class="imagen_banner">
 </div>
 
 
-<div class="container col-md-6 pt-4" style="background-color:white; color: black; ">
+<div class="container col-md-6 pt-4" style="background-color:white; color: black;" onkeyup="descripcion_busqueda()" >
   <form action="" method="POST"  enctype="multipart/form-data" class="pb-4">
     {% csrf_token %}
     <div class="form-row">
@@ -56,6 +56,7 @@
     <div class="form-row">
       <div class="form-group col-md-12 mb-0">
           {{ busqueda.descripcion | as_crispy_field }}
+      <div id="caracteres_busqueda"> 150 de 150 caractéres restantes</div>
       </div>
     </div>
 

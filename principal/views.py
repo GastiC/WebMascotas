@@ -49,7 +49,7 @@ def refugios(request):
         else:
             newsletter = formularioNewsletter 
 
-    paginator = Paginator(refugios, 5)
+    paginator = Paginator(refugios, 3)
 
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)   

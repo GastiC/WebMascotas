@@ -1,61 +1,40 @@
 {% extends "principal/index.html" %}
 {% load static %}
 {% block title %} Refugios {% endblock %}
-{% block content %} 
+{% block content %}
 
 <br>
-<div class="container mt-4 contenedor_imagen pr-0 " >  
-  <div class="container text-center fondo_banner p-0">
-      <h1 class="texto_banner"> ¿Quiénes somos?</h1>
-  </div>
-<img src="{% static 'principal/img/429416-svetik_2560x1440.jpg' %}" class="imagen_banner">
+<div class="mt-4 contenedor_imagen pr-0 ">
+    <div class="text-center fondo_banner p-0">
+        <h1 class="texto_banner"> ¿Quiénes somos?</h1>
+    </div>
+    <img src="{% static 'principal/img/429416-svetik_2560x1440.jpg' %}" class="imagen_banner">
 </div>
 
 <div class="container mt-4 mb-4 quienes_somos">
     <div class="card-deck">
         <div class="card">
             <img src="{% static 'principal/img/quienesSomos1.jpg' %}" class="card-img imagen_quienes_somos" alt="...">
-        <div class="card-body">
-            <h2 class="card-title">Nuestra misión</h2>
-            <p class="card-text" style="margin-bottom: 45px; font-size: 17px; ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quia nisi repudiandae ducimus. Corporis temporibus, aliquam pariatur rerum earum tenetur perspiciatis, quae adipisci eveniet voluptas harum velit, ullam aliquid accusamus.</p>  
-            <a href="/sign_in/" class="btn btn-info" style="text-align: center;" >Más información</a>
-        
-        </div>
+            <div class="card-body">
+                <h2 class="card-title">Nuestra misión</h2>
+                <p class="card-text" style="margin-bottom: 45px; font-size: 17px; "> Tenemos por misión el ayudarte a
+                    encontrar a tu mascota perdida. Vamos a intentarlo usando todas las herramientas que creamos en esta
+                    web.</p>
+            </div>
         </div>
         <div class="card">
             <img src="{% static 'principal/img/quienesSomos2.jpg' %}" class="card-img imagen_quienes_somos" alt="...">
-        <div class="card-body">
-            <h2 class="card-title">Nuestra historia</h2>
-            <p class="card-text" style="margin-bottom: 45px; font-size: 17px; ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quia nisi repudiandae ducimus. Corporis temporibus, aliquam pariatur rerum earum tenetur perspiciatis, quae adipisci eveniet voluptas harum velit, ullam aliquid accusamus.</p>  
-            <a href="/sign_in/" class="btn btn-info" >Más información</a>
-        </div>
-        </div>
-      </div>
-</div>
-
-<div class="container mt-4 mb-4 quienes_somos">
-    <div class="card-deck">
-
-        <div class="card">
-            <div class="container mt-4 mb-4">
-            <div class="row">
-            <div class="col-md-6" >
-            <img src="{% static 'principal/img/quienesSomos1.jpg' %}" class="card-img imagen_quienes_somos" alt="...">
-            </div>        
-            <div class="col-md-6" >
-            <img src="{% static 'principal/img/quienesSomos1.jpg' %}" class="card-img imagen_quienes_somos" alt="...">
-            </div>        
-            </div>        
+            <div class="card-body">
+                <h2 class="card-title">Nuestra historia</h2>
+                <p class="card-text" style="margin-bottom: 45px; font-size: 17px; "> Este proyecto se generó gracias al
+                    gran amor que siento por los animales. Siempre tuve el deseo de poder ayudar a los perros y gatos
+                    que se encuentran sin un hogar. Además, ayudar a las personas a que encuentren a sus preciadas
+                    mascotas.</p>
             </div>
-        <div class="card-body">
-            <h2>Nuestro equipo</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis repudiandae expedita consectetur, obcaecati at optio, quia, sint voluptates accusamus eligendi unde molestiae nemo id? Nihil, totam sed. In, impedit laboriosam?</p> 
-        
         </div>
-        </div>
-
-      </div>
+    </div>
 </div>
+
 
 
 

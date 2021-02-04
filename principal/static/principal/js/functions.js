@@ -30,4 +30,32 @@ function contacto(e){
     else {
         console.log(document.getElementById("id_email").value);
     }
-}
+};
+
+function descripcion_busqueda(){
+    elemento_descripcion = document.getElementById('id_descripcion').value
+    total = elemento_descripcion.length;
+    restante = 150 - total;
+    console.log(restante)
+    document.getElementById('caracteres_busqueda').innerHTML = `${restante} de 150 caractéres restantes.`; 
+};
+
+function descripcion_refugio(){
+    elemento_descripcion = document.getElementById('id_descripcion').value
+    total = elemento_descripcion.length;
+    restante = 300 - total;
+    console.log(restante)
+    document.getElementById('caracteres_refugio').innerHTML = `${restante} de 300 caractéres restantes.`; 
+};
+
+
+function onresize_body () {
+    var foto = document.getElementsByClassName("imagen_banner")[0];
+    var fondo = document.getElementsByClassName("fondo_banner")[0];
+
+    if (window.innerWidth > 575) {
+        total = foto.clientHeight
+        fondo.style.minHeight = total + "px";
+    } else { fondo.style.minHeight = 0
+     };
+};

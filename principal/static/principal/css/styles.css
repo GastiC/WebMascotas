@@ -47,8 +47,8 @@
     color: white; 
     padding-top: 20%; 
     font-weight: 500; 
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     position: relative;
+    font-size: 50px;
 }
 
 .imagen_home{
@@ -79,7 +79,7 @@
 
 .busqueda_foto {
     width: 100%;
-    height: 15em;
+    height: 300px;
 }
 
 .preguntas_frecuentes {
@@ -87,7 +87,8 @@
 }  
 
 .contenedor_preguntas{
-    background-color: white;
+    background-color: rgb(59, 59, 59);
+    padding-bottom: 20px;
 }
 .preguntas_frecuentes_card {
       border: 0;
@@ -103,38 +104,48 @@
 .preguntas_frecuentes_titulo a {
           font-size: 20px;  
           font-weight: 500;
-          color: #000;
+          color: rgba(255,255,255,.5);
           position: relative;
           background-image: linear-gradient(currentColor, currentColor);
-          background-position: 0% 100%;
+          background-position: 50% 100%;
           background-repeat: no-repeat;
           background-size: 0% 2px;
           transition: background-size .3s;
           text-decoration-line: none;
-          text-align: center;
+          padding-right: 10px;
+          padding-left: 10px;
 }
 
 .subrayado {
     background-image: linear-gradient(currentColor, currentColor);
-    background-position: 0% 100%;
+    background-position: 50% 100%;
     background-repeat: no-repeat;
     background-size: 0% 2px;
     transition: background-size .3s;
     text-decoration-line: none;
+    padding-right: 10px;
+    padding-left: 10px;
+
 }
 
 .subrayado:hover{
-    background-size: 100% 2px;
+    background-size: 70% 2px;
     text-decoration-line: none;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
+a:hover{
+    text-decoration: none !important;
+}
 .preguntas_frecuentes_titulo a:hover {
-    color: #000;
+    color: rgba(255,255,255);
 }
 .respuesta_pregunta {
         padding: 20px 20px 0; 
         font-size: 15px;
         text-align: justify;
+        color: rgba(255,255,255,.8);
 }
 .respuesta_pregunta a{
     font-size: 12px;
@@ -142,6 +153,7 @@
 }
 .preguntas_frecuentes .about-image img {
       width: 100%; 
+      padding-top: 15px;
 }
 
 .formulario_contacto{
@@ -179,13 +191,13 @@
 }
 
 .boton_login{
-    color: rgba(255,255,255,.5);
+    color: white;
 }
 .formato_boton_login{
-    border-color:rgba(255,255,255,.1) !important ;
+    border-color:white !important ;
 }
 .icono_login_navbar {
-    color: rgba(255,255,255,.5) ;
+    color: white ;
 }
 
 .campos_login{
@@ -206,6 +218,79 @@
     width: 30px;
     margin-right: 15px;
 }
+
+.busqueda_nombre{
+    display: inline;    
+}
+
+.descripcion_busqueda{
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.descripcion_refugio{
+    font-size: 13px; 
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+#caracteres_busqueda{
+    font-size: 12px;
+    font-weight: 600;    
+    text-align: right !important;
+}
+
+#caracteres_refugio{
+    font-size: 12px;
+    font-weight: 600;    
+    text-align: right !important;
+}
+
+.imagen_refugio{
+    height: 250px;
+}
+.bloque_refugio{
+    background-color: white; 
+    padding: 10px; 
+}
+
+.contenedor_card{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.contenedor_card_margin{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+.bloque_busqueda{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+#footer {
+    background-color: #343a40;
+}
+
+.ul_footer {
+    list-style: none; 
+    padding-left: 15px;
+}
+
+.li_footer{
+    padding-bottom: 10px;
+}
+
+.text_footer{
+    color: #F2F0F2 !important;
+}
+
+.h4_footer{
+    padding-bottom: 15px; 
+    color: #F2F0F2;
+}
+
 @media (max-width: 575px) {
     .imagen_banner {
         margin-top: 35px;
@@ -214,9 +299,6 @@
     .imagen_home{
         margin-top: 35px;
         height: 220px;        
-    }
-    .texto_banner h1{
-        font-size: 25px; 
     }
 
     .fondo_banner {
@@ -236,50 +318,76 @@
     .boton_login{
         display: none;
     }
-
+    .boton_info{
+        text-align: center;
+    }
 }
+
 @media (min-width: 576px) and (max-width: 767px) {
     .imagen_home{
         margin-top: 20px;
         height: 380px;                
-   }
-
+    }
     .imagen_banner {
-    margin-top: 20px;
-}
+    margin-top: 15px;
+    }
     .preguntas_frecuentes .about-image img {
     display: none;
-}
+    }
     .fondo_banner {
-    height: 185px;
-}
+    height: 195px;
+    }
+    .boton_info{
+        text-align: center;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
     .imagen_home{
         margin-top: 20px;
         height: 380px;                
-   }
-
+    }
     .imagen_banner {
-    margin-top: 20px;
-}
+    margin-top: 10px;
+    }
 
     .fondo_banner {
-    height: 240px;
-}
+    height: 250px;
+    }
+
     .redes_iconos{
     width: 21px;
     margin-right: 5px;
-}
-
+    }
     #div_id_email {
     width: 110px;
-}
+    }
     #div_id_email input::placeholder{
     text-overflow: ellipsis !important;
     font-size: 14px;
-  }
+    }
+    .preguntas_frecuentes .about-image img {
+    display: none;
+    }
+
+    .bloque_descripcion{
+        min-height: 210px !important;
+    }
+    .imagen_refugio{
+        max-width: 500px !important;
+        margin-left: 100px;
+
+    }
+    .bloque_refugio{
+        max-width: 500px !important;
+        margin-left: 100px;    
+    }
+    .boton_info{
+        text-align: center;
+    }
+    .busqueda_foto {
+        height: 250px;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -290,12 +398,10 @@
 }
 
     .imagen_banner {
-    margin-top: 20px;
+    margin-top: 5px;
 }
-
-
     .fondo_banner {
-    height: 315px;
+    height: 325px;
 }
     .redes_iconos{
         width: 30px;
@@ -304,6 +410,18 @@
     #div_id_email {
     width: 130px;
 }
+    .preguntas_frecuentes .about-image img {
+    padding-bottom: 5px;
+    }
+
+    .bloque_descripcion{
+        min-height: 190px !important;
+    }
+
+    .bloque_refugio{
+        height: 250px;
+    }
+
 }
 
 @media (min-width: 1200px) {
@@ -311,14 +429,15 @@
     margin-top: 18px;
     height: 590px;                
    }
-
-    .imagen_banner {
-    margin-top: 20px;
-}
     .fondo_banner {
-    height: 370px;
+    height: 380px;
 }
-
+    .bloque_descripcion{
+        min-height: 170px !important;
+    }
+    .bloque_refugio{
+        height: 250px;
+    }
 }
 
 

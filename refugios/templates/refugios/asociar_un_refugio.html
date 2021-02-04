@@ -5,8 +5,8 @@
 {% block content %} 
 {% load crispy_forms_tags%}
 <br>
-<div class="container mt-4 contenedor_imagen pr-0 " >  
-  <div class="container text-center fondo_banner p-0">
+<div class="mt-4 contenedor_imagen pr-0 " >  
+  <div class="text-center fondo_banner p-0">
       <h1 class="texto_banner"> Asociar un refugio</h1>
   </div>
 <img src="{% static 'principal/img/429416-svetik_2560x1440.jpg' %}" class="imagen_banner">
@@ -14,7 +14,7 @@
 
 <div class="container col-md-6 pt-4 mb-4 formulario_contacto" >
 
-  <form action="" method="POST"  enctype="multipart/form-data" class="pb-4">
+  <form action="" method="POST"  enctype="multipart/form-data" class="pb-4" onkeyup="descripcion_refugio()">
 
     {% csrf_token %}
     <div class="form-row">
@@ -75,6 +75,7 @@
     <div class="form-row">
       <div class="form-group col-md-12 mb-0">
           {{ refugio.descripcion | as_crispy_field }}
+        <div id="caracteres_refugio"> 150 de 150 caractéres restantes</div>
       </div>
     </div>
 

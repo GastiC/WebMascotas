@@ -6,8 +6,8 @@
 {% block content %} 
 
 <br>
-<div class="container mt-4 contenedor_imagen pr-0 " >  
-  <div class="container text-center fondo_banner p-0">
+<div class="mt-4 contenedor_imagen pr-0 " >  
+  <div class="text-center fondo_banner p-0">
       <h1 class="texto_banner"> Refugios</h1>
   </div>
 <img src="{% static 'principal/img/429416-svetik_2560x1440.jpg' %}" class="imagen_banner">
@@ -16,17 +16,19 @@
 <div class="container mt-4 mb-4" >
         {% for refugio in page_obj %}
         <div class="row">
-            <div class="col-md-6">
-                <img src="{{refugio.foto_refugio.url}}" class="card-img" alt="..." style="height: 235px; margin-bottom: 20px;">
+            <div class="col-lg-5 contenedor_card">
+                <img src="{{refugio.foto_refugio.url}}" class="card-img imagen_refugio" alt="..." >
             </div>
-            <div class="col-md-6">
-                <div class="card col-md-12 " style="background-color: white; padding: 10px;">
+            <div class="col-lg-7 contenedor_card">
+                <div class="card col-md-12 mb-3 bloque_refugio">
                 <div class="card-body">
-                    <h3 class="card-title">{{refugio.nombre}} </h3>
-                    <p class="card-text" style="margin-bottom: 65px; font-size: 17px; ">
+                    <h4 class="card-title">{{refugio.nombre}} </h4>
+                    <p class="card-text descripcion_refugio">
                         {{refugio.descripcion}}
                     </p>
-                    <a href='{{refugio.id}}/' class="btn btn-info" >Más información</a>
+                    <div class="boton_info">
+                    <a href='{{refugio.id}}/' class="btn btn-dark btn-md"  >Más información</a>
+                    </div>
                   </div>       
                 </div>         
             </div>

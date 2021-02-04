@@ -6,21 +6,21 @@
 {% block content %} 
 
 <br>
-<div class="container mt-4 contenedor_imagen pr-0 " >  
-  <div class="container text-center fondo_banner p-0">
+<div class="mt-4 contenedor_imagen pr-0 mb-0" >  
+  <div class="text-center fondo_banner p-0">
       <h1 class="texto_banner"> Preguntas frecuentes</h1>
   </div>
 <img src="{% static 'principal/img/429416-svetik_2560x1440.jpg' %}" class="imagen_banner">
 </div>
 
 <section class="preguntas_frecuentes">
-  <div class="container mb-4">
+  <div class="container">
       <div class="row contenedor_preguntas">
-          <div class="col-md-6">
+          <div class="col-lg-6">
                       <div class="accordion" id="accordionExample">
                           <div class="preguntas_frecuentes_card">
                               <div class="preguntas_frecuentes_titulo" id="headingTwo">
-                                  <a class="subrayado" href="#" class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">¿Por donde empiezo?</a>
+                                  <a href="#" class="collapsed subrayado" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">¿Por donde empiezo?</a>
                               </div>
                               <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                   <div class="respuesta_pregunta">
@@ -30,7 +30,7 @@
                           </div> 
                           <div class="preguntas_frecuentes_card">
                               <div class="preguntas_frecuentes_titulo" id="headingThree">
-                                  <a class="subrayado" href="#" class="collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">¿Cómo funciona?</a>
+                                  <a href="#" class="collapsed subrayado" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">¿Cómo funciona?</a>
                               </div>
                               <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                                   <div class="respuesta_pregunta">
@@ -40,7 +40,7 @@
                           </div> 
                           <div class="preguntas_frecuentes_card">
                               <div class="preguntas_frecuentes_titulo" id="headingFore">
-                                  <a class="subrayado" href="#" class="collapsed" data-toggle="collapse" data-target="#collapseFore" aria-expanded="false" aria-controls="collapseFore">¿Cómo me mantengo actualizado sobre mi búsqueda?</a>
+                                  <a href="#" class="collapsed subrayado" data-toggle="collapse" data-target="#collapseFore" aria-expanded="false" aria-controls="collapseFore">¿Cómo me mantengo actualizado sobre mi búsqueda?</a>
                               </div>
                               <div id="collapseFore" class="collapse" aria-labelledby="headingFore" data-parent="#accordionExample">
                                   <div class="respuesta_pregunta">
@@ -50,7 +50,7 @@
                           </div> 
                           <div class="preguntas_frecuentes_card">
                               <div class="preguntas_frecuentes_titulo" id="headingFive">
-                                  <a class="subrayado" href="#" class="collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">Tengo un problema. ¿Con quién me comunico?</a>
+                                  <a href="#" class="collapsed subrayado pb-4" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">Tengo un problema. ¿Con quién me comunico?</a>
                               </div>
                               <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
                                   <div class="respuesta_pregunta">
@@ -61,16 +61,12 @@
                       </div>
           </div>
           <div class="col-md-6">
-              <div class="about-image mt-5">
+              <div class="about-image">
                   <img src="{% static 'principal/img/quienesSomos1.jpg' %}">
               </div> 
           </div>
       </div>
   </div> 
 </section>
-
-
-
-
 
 {% endblock %}

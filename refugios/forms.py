@@ -15,7 +15,7 @@ class RefugioForm(forms.ModelForm):
     facebook = forms.CharField(required=False)
     instagram = forms.CharField(required=False)
     foto_refugio = forms.ImageField()
-    descripcion = forms.CharField(widget=forms.Textarea(attrs={'rows':5}))
+    descripcion = forms.CharField(widget=forms.Textarea(attrs={'rows':5}),max_length=300,)
 
     class Meta:
         model = Refugio

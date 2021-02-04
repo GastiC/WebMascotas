@@ -3,8 +3,8 @@
 {% block title %} Busquedas {% endblock %}
 {% block content %}
 <br>
-<div class="container mt-4 contenedor_imagen pr-0 " >  
-  <div class="container text-center fondo_banner p-0">
+<div class="mt-4 contenedor_imagen pr-0 " >  
+  <div class="text-center fondo_banner p-0">
       <h1 class="texto_banner"> Búsquedas</h1>
   </div>
 <img src="{% static 'principal/img/429416-svetik_2560x1440.jpg' %}" class="imagen_banner">
@@ -14,14 +14,13 @@
 <div class="container mt-4 mb-4" >
   <div class="card-deck">
       {% for busqueda in page_obj %}
-        <div class="col-md-4 mt-3 mb-3">
-        <div class="card">
+        <div class="col-md-4 mt-3 mb-3 contenedor_card">
+        <div class="card contenedor_card_margin">
             <img src="{{busqueda.foto.url}}" class="card-img busqueda_foto" alt="...">
-            <div class="card-body">
-              <h3 class="card-title">{{busqueda.nombreMascota | capfirst }}</h3>
-              <h5 class="card-title">{{busqueda.raza | title }}</h5>
-              <h6 class="card-title">{{busqueda.categoria | capfirst}}</h6>
-              <p class="card-text">{{busqueda.descripcion | capfirst}}</p>
+            <div class="card-body bloque_descripcion">
+                <h5 class="card-title busqueda_nombre">{{busqueda.nombreMascota | capfirst }} - </h3>
+                <h6 class="card-title busqueda_nombre">{{busqueda.raza | title }}</h5>
+              <p class="card-text descripcion_busqueda">{{busqueda.descripcion | capfirst}}</p>
               <p class="card-text"><small class="text-muted">{{busqueda.creado}}</small></p>
             </div>
           </div>  

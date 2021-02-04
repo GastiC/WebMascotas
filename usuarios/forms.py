@@ -15,7 +15,7 @@ class BusquedaForm(forms.ModelForm):
     codigoArea = forms.IntegerField(label="Prefijo",)
     telefono = forms.IntegerField(label="Teléfono",)
     celular = forms.IntegerField()
-    descripcion = forms.CharField(widget=forms.Textarea(attrs={'rows':5}))
+    descripcion = forms.CharField(widget=forms.Textarea(attrs={'rows':5}),max_length=150,)
     foto = forms.ImageField(label="Foto de tu mascota",)
 
     class Meta:

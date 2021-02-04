@@ -10,29 +10,29 @@
                 <div class="row">
                     <div class= "col-md-5" style="margin-right: 50px;">
                     
-                        <h4 style="padding-bottom: 15px; color: #F2F0F2;">Sobre nosotros</h4>
-                        <p style="color: rgb(136, 136, 136);" >
+                        <h4 class="h4_footer">Sobre nosotros</h4>
+                        <p class="text_footer" >
                             En esta página vas a poder publicar la búsqueda de tu mascota. 
                             Nosotros vamos a intentar que te reencuentres con tu pequeño ser querido.
                         </p>
                     </div>
                         <div class= "col-md-4-">
-                            <ul style="list-style: none; padding-left: 15px">
-                                <h4 style="padding-bottom: 15px; color: #F2F0F2;">Links</h4>
-                                <li style="padding-bottom: 10px; ">
-                                    <a class="subrayado" style= "color: rgb(136, 136, 136);" href="/preguntas_frecuentes/">Preguntas frecuentes</a>
+                            <ul class="ul_footer">
+                                <h4 class="h4_footer">Links</h4>
+                                <li class="li_footer">
+                                    <a  class="text_footer" href="/preguntas_frecuentes/">Preguntas frecuentes</a>
                                 </li>
-                                <li style="padding-bottom: 10px;">         
-                                    <a class="subrayado" style= "color: rgb(136, 136, 136);"href="/quienes_somos/">¿Quiénes somos?</a>                    
+                                <li class="li_footer">         
+                                    <a class="text_footer" href="/quienes_somos/">¿Quiénes somos?</a>                    
                                 </li>
-                                <li style="padding-bottom: 10px;">             
-                                    <a class="subrayado" style= "color: rgb(136, 136, 136);"href="/contacto/">Contacto</a>
+                                <li class="li_footer">             
+                                    <a  class="text_footer"href="/contacto/">Contacto</a>
                                 </li>
-                                <li style="padding-bottom: 10px;">                
-                                    <a class="subrayado" style= "color: rgb(136, 136, 136);"href="/asociar_un_refugio/">Asociar un refugio</a>
+                                <li class="li_footer">                
+                                    <a  class="text_footer"href="/asociar_un_refugio/">Asociar un refugio</a>
                                 </li>
-                                <li style="padding-bottom: 10px;">
-                                    <a class="subrayado" style= "color: rgb(136, 136, 136);"href="/terminos_y_condiciones/">Términos y condiciones</a>
+                                <li class="li_footer">
+                                    <a  class="text_footer"href="/terminos_y_condiciones/">Términos y condiciones</a>
                                 </li>
 
                             </ul>
@@ -42,7 +42,7 @@
             {% if request.path == '/accounts/login/' %}
             <div class= "col-sm-12 col-md-3 col-lg-3 col-xl-3">
 
-            <h4 style="padding-bottom: 15px;color: #F2F0F2;"> Nuestras redes sociales</h4>
+            <h4 class="h4_footer"> Nuestras redes sociales</h4>
 
             <div class="container">
             <a href="https://www.facebook.com/Encontra-a-tu-mascota-106295038071932/" target="_blank">
@@ -63,7 +63,7 @@
 
             {% else %}
             <div class= "col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                <h4 style="padding-bottom: 15px;color: #F2F0F2;"> Suscribite</h4>
+                <h4 class="h4_footer"> Suscribite</h4>
                 <form class="input-group mb-3" action="" method="post" id="id_newsletter">
                     {% csrf_token %}
                     <!-- <input type="email" class="form-control" placeholder="Ingrese email" aria-label="Recipient's username" aria-describedby="button-addon2"> -->
@@ -74,7 +74,7 @@
                     </div>
                 </form>
 
-                <h4 style="padding-bottom: 15px;color: #F2F0F2;"> Nuestras redes sociales</h4>
+                <h4 class="h4_footer"> Nuestras redes sociales</h4>
 
                 <div class="container">
                 <a href="https://www.facebook.com/Encontra-a-tu-mascota-106295038071932/" target="_blank">
