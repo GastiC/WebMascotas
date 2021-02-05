@@ -1,3 +1,9 @@
+#body{
+    background-image: url('/static/img/fondoBody.jpg');
+    background-size: cover;
+
+}
+
 .asteriskField{
     visibility: hidden !important;
 }
@@ -26,10 +32,12 @@
 }
 
 .contenedor_imagen{
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     padding-right: 0px !important;
     padding-left: 0px !important;
 }
+
+
 .fondo_banner {
     background: rgba(12, 12, 12, 0.6); 
     position: absolute; 
@@ -87,7 +95,10 @@
 }  
 
 .contenedor_preguntas{
-    background-color: rgb(59, 59, 59);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(100, 100, 100, 0.15) !important;  
+    backdrop-filter: blur(10px) !important;
     padding-bottom: 20px;
 }
 .preguntas_frecuentes_card {
@@ -104,7 +115,7 @@
 .preguntas_frecuentes_titulo a {
           font-size: 20px;  
           font-weight: 500;
-          color: rgba(255,255,255,.5);
+          color: rgb(59, 59, 59);
           position: relative;
           background-image: linear-gradient(currentColor, currentColor);
           background-position: 50% 100%;
@@ -139,13 +150,14 @@ a:hover{
     text-decoration: none !important;
 }
 .preguntas_frecuentes_titulo a:hover {
-    color: rgba(255,255,255);
+    color: rgb(41, 41, 41);
+    font-weight: 700;
 }
 .respuesta_pregunta {
         padding: 20px 20px 0; 
         font-size: 15px;
         text-align: justify;
-        color: rgba(255,255,255,.8);
+        color:rgb(59, 59, 59);
 }
 .respuesta_pregunta a{
     font-size: 12px;
@@ -157,8 +169,9 @@ a:hover{
 }
 
 .formulario_contacto{
-    background-color:white ; 
-    color: black;
+    background-color: rgba(100, 100, 100, 0.15) !important;  
+    backdrop-filter: blur(10px) !important;
+    color: rgb(65, 65, 65);
 }
 
 
@@ -220,12 +233,15 @@ a:hover{
 }
 
 .busqueda_nombre{
-    display: inline;    
+    display: inline;
+    color:rgb(51, 51, 51)
+    
 }
 
 .descripcion_busqueda{
     margin-top: 10px;
     font-size: 12px;
+    color:rgb(59, 59, 59)
 }
 
 .descripcion_refugio{
@@ -249,14 +265,17 @@ a:hover{
 .imagen_refugio{
     height: 250px;
 }
+
 .bloque_refugio{
-    background-color: white; 
-    padding: 10px; 
+    padding: 10px;
+    background-color: rgba(100, 100, 100, 0.15) !important;  
+    backdrop-filter: blur(10px) !important;
 }
 
 .contenedor_card{
     padding-left: 0px !important;
     padding-right: 0px !important;
+
 }
 
 .contenedor_card_margin{
@@ -267,6 +286,11 @@ a:hover{
 .bloque_busqueda{
     margin-left: 0px !important;
     margin-right: 0px !important;
+}
+
+.bloque_descripcion{
+    background-color: rgba(100, 100, 100, 0.15) !important;  
+    backdrop-filter: blur(10px) !important;
 }
 
 #footer {
@@ -286,10 +310,52 @@ a:hover{
     color: #F2F0F2 !important;
 }
 
+.text_footer_link{
+    color: #F2F0F2 !important;
+}
+
+.text_footer_link:hover{
+    color: #ffffff !important;
+    font-weight: 600;
+}
+
 .h4_footer{
     padding-bottom: 15px; 
     color: #F2F0F2;
 }
+
+.fecha_creado{
+    position: absolute;
+    bottom: 10px; 
+    right: 10px;
+}
+
+.pl15{
+    padding-left: 30px !important;
+}
+
+.pr15{
+    padding-right: 30px !important;
+}
+
+.paginacion{
+    background-color: #343a40 !important;
+    color: #F2F0F2 !important;
+    border: 0px !important;
+    margin-right: 3px !important;
+}
+
+.paginacion:hover{
+    background-color: #4a525a !important;
+
+}
+
+.boton{
+    background-color: #17a2b8 !important;
+}
+
+
+
 
 @media (max-width: 575px) {
     .imagen_banner {

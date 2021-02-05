@@ -13,7 +13,7 @@
 <img src="{% static 'principal/img/429416-svetik_2560x1440.jpg' %}" class="imagen_banner">
 </div>
 
-<div class="container mt-4 mb-4" >
+<div class="container mt-4 mb-4 pr15 pl15" >
         {% for refugio in page_obj %}
         <div class="row">
             <div class="col-lg-5 contenedor_card">
@@ -27,7 +27,7 @@
                         {{refugio.descripcion}}
                     </p>
                     <div class="boton_info">
-                    <a href='{{refugio.id}}/' class="btn btn-dark btn-md"  >Más información</a>
+                    <a href='{{refugio.id}}/' class="btn btn-md btn-info"  >Más información</a>
                     </div>
                   </div>       
                 </div>         
@@ -42,21 +42,21 @@
     <ul class="pagination justify-content-center">
       <li class="page-item">
         {% if page_obj.has_previous %}
-          <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
-          <span aria-hidden="true">Anterior</span>
+          <a class="page-link paginacion" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+          <span aria-hidden="true" class="paginacion">Anterior</span>
           </a>
         {% endif %}
       </li>
         
         {% for i in page_obj.paginator.page_range %}
-        <li class="page-item">
-          <a class="page-link" href="?page={{ i }}"> {{ i }}</a>
+        <li class="page-item ">
+          <a class="page-link paginacion" href="?page={{ i }}">  <span class="paginacion"> {{ i }} </span></a>
         </li>
         {% endfor %}
       <li class="page-item">
         {% if page_obj.has_next %}
-        <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
-          <span aria-hidden="true">Siguiente </span>
+        <a class="page-link paginacion" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+          <span aria-hidden="true" class="paginacion">Siguiente </span>
         </a>
         {% endif %}
       </li>
