@@ -14,7 +14,7 @@
 
 <div class="container col-md-6 pt-4 mb-4 formularios" >
 
-  <form action="" method="POST"  enctype="multipart/form-data" class="pb-4" onkeyup="descripcion_refugio()">
+  <form action="" method="POST" id="formulario_refugio" enctype="multipart/form-data" class="pb-4" onkeyup="descripcion_refugio()">
 
     {% csrf_token %}
     <div class="form-row">
@@ -83,7 +83,7 @@
     </div>
 
     <div class="container text-center">
-    <button type="submit" class="btn btn-info btn-md text-center" style="width: 100px;" id="enviar"; >Enviar</button>
+    <button type="button" class="btn btn-info btn-md text-center" style="width: 100px;" id="enviar_refugio"; onclick="asociar_refugio()">Enviar</button>
     </div>
     {{mensaje}}
   </form>
