@@ -9,10 +9,11 @@
 }
 
 #id_foto_refugio{
-    color: white !important;
+    font-size: 12px !important;
+    vertical-align: bottom !important;
 }
 #id_foto{
-    color: white !important;
+    font-size: 12px !important;
 }
 
 #div_id_email_newsletter label{
@@ -35,6 +36,7 @@
     margin-bottom: 20px;
     padding-right: 0px !important;
     padding-left: 0px !important;
+    position: relative;
 }
 
 
@@ -168,8 +170,8 @@ a:hover{
       padding-top: 15px;
 }
 
-.formulario_contacto{
-    background-color: rgba(100, 100, 100, 0.15) !important;  
+.formularios{
+    background-color: rgba(253, 253, 253, 0.568) !important;  
     backdrop-filter: blur(10px) !important;
     color: rgb(65, 65, 65);
 }
@@ -244,6 +246,12 @@ a:hover{
     color:rgb(59, 59, 59)
 }
 
+.descripcion_quienes_somos{
+    margin-bottom: 45px; 
+    font-size: 17px;
+    color:rgb(59, 59, 59)
+}
+
 .descripcion_refugio{
     font-size: 13px; 
     margin-bottom: 30px;
@@ -268,7 +276,7 @@ a:hover{
 
 .bloque_refugio{
     padding: 10px;
-    background-color: rgba(100, 100, 100, 0.15) !important;  
+    background-color: rgba(253, 253, 253, 0.568) !important;  
     backdrop-filter: blur(10px) !important;
 }
 
@@ -354,7 +362,9 @@ a:hover{
     background-color: #17a2b8 !important;
 }
 
-
+.titulo_card {
+    color:rgb(51, 51, 51)
+}
 
 
 @media (max-width: 575px) {
@@ -369,13 +379,14 @@ a:hover{
 
     .fondo_banner {
         height: 155px;
+        
     }
     .texto_banner{
         padding-top: 20%; 
         font-size: 30px;
 
     }
-    .formulario_contacto{
+    .formularios{
         text-align: center !important;
     }
     .redes_iconos{
@@ -401,7 +412,8 @@ a:hover{
     display: none;
     }
     .fondo_banner {
-    height: 195px;
+        height: 195px;
+        margin-top: 15px;
     }
     .boton_info{
         text-align: center;
@@ -419,6 +431,7 @@ a:hover{
 
     .fondo_banner {
     height: 250px;
+    margin-top: 10px;
     }
 
     .redes_iconos{
@@ -468,6 +481,7 @@ a:hover{
 }
     .fondo_banner {
     height: 325px;
+    margin-top: 5px;
 }
     .redes_iconos{
         width: 30px;

@@ -12,18 +12,15 @@
 <img src="{% static 'principal/img/429416-svetik_2560x1440.jpg' %}" class="imagen_banner">
 </div>
 
-<div class="container col-md-6 pt-4 mb-4 formulario_contacto" >
+<div class="container col-md-6 pt-4 mb-4 formularios" >
 
   <form action="" method="POST"  enctype="multipart/form-data" class="pb-4" onkeyup="descripcion_refugio()">
 
     {% csrf_token %}
     <div class="form-row">
-      <div class="form-group col-md-6 mb-0">
+      <div class="form-group col-md-12 mb-0">
           {{ refugio.nombre | as_crispy_field }}
       </div>
-      <div class="form-group col-md-6 mb-0">
-        {{ refugio.foto_refugio | as_crispy_field }}
-    </div>
     </div>
 
     <div class="form-row">
@@ -75,7 +72,13 @@
     <div class="form-row">
       <div class="form-group col-md-12 mb-0">
           {{ refugio.descripcion | as_crispy_field }}
-        <div id="caracteres_refugio"> 150 de 150 caractéres restantes</div>
+        <div id="caracteres_refugio"> 300 de 300 caractéres restantes</div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-12 mb-0">
+        {{ refugio.foto_refugio | as_crispy_field }}
       </div>
     </div>
 

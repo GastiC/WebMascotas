@@ -5,7 +5,7 @@
 {% block content %} 
 {% load crispy_forms_tags %}
 <br>
-<div class="mt-4 contenedor_imagen pr-0 " >  
+<div class="mt-4 contenedor_imagen pr-0 mb-3" >  
   <div class="text-center fondo_banner p-0">
       <h1 class="texto_banner"> Subí tu búsqueda</h1>
   </div>
@@ -13,7 +13,7 @@
 </div>
 
 
-<div class="container col-md-6 pt-4" style="background-color:white; color: black;" onkeyup="descripcion_busqueda()" >
+<div class="container col-md-6 pt-4 mb-4 formularios"  onkeyup="descripcion_busqueda()" >
   <form action="" method="POST"  enctype="multipart/form-data" class="pb-4">
     {% csrf_token %}
     <div class="form-row">

@@ -36,7 +36,11 @@
     </div>
     {% if user.is_authenticated %}
     <form class="form-inline my-2 my-lg-0">
-      <a href="{% url 'logout' %}" class="btn btn-dark my-2 my-sm-0 formato_boton_login"  type="button"><span class="boton_login">Cerrar sesión </span> <i class="fas fa-sign-in-alt icono_login_navbar"></i></a>
+      
+      <a href="{% url 'logout' %}" class="btn btn-dark my-2 my-sm-0 formato_boton_login"  type="button"> 
+        <i class="fas fa-sign-out-alt icono_login_navbar"></i>        
+        <span class="boton_login">Cerrar sesión </span> 
+      </a>
     </form>
     {% else %}
     <form class="form-inline my-2 my-lg-0">
