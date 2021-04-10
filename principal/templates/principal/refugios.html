@@ -15,12 +15,12 @@
 
 <div class="container mt-4 mb-4 pr15 pl15" >
         {% for refugio in page_obj %}
-        <div class="row">
+        <div class="row b-s">
             <div class="col-lg-5 contenedor_card">
                 <img src="{{refugio.foto_refugio.url}}" class="card-img imagen_refugio" alt="..." >
             </div>
             <div class="col-lg-7 contenedor_card">
-                <div class="card col-md-12 mb-3 bloque_refugio">
+                <div class="card col-md-12 bloque_refugio">
                 <div class="card-body">
                     <h4 class="card-title titulo_card">{{refugio.nombre}} </h4>
                     <p class="card-text descripcion_refugio">
@@ -33,6 +33,8 @@
                 </div>         
             </div>
         </div>
+
+        <hr class="b-s">
         {% endfor %}
         
           </div>

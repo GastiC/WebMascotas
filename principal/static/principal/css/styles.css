@@ -33,7 +33,6 @@
 }
 
 .contenedor_imagen{
-    margin-bottom: 20px;
     padding-right: 0px !important;
     padding-left: 0px !important;
     position: relative;
@@ -184,6 +183,58 @@ a:hover{
 
 }
 
+.icono_refugio {
+    color: grey ;
+    margin-right: 15px;
+    font-size: 30px;
+}
+
+.w5 {
+    width: 5%;
+} 
+.f-left{
+    float: left;
+}
+
+.w95 {
+    width: 95%;
+} 
+.mb5{
+    margin-bottom: 20px;
+}
+
+.link_refugio{
+    text-decoration: none;
+    color: #212529;
+}
+
+.link_refugio:hover{
+    color: black;
+    font-weight: 600;
+}
+
+.contenedor_imagen_refugio{
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 20px !important;
+}
+
+.b-s {
+    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%)!important ;
+}
+.card_descripcion{
+    max-height: 544px;   
+    margin-left: 15px; 
+}
+
+.nombre_refugio{
+    text-align: center;
+    font-size: 40px;
+    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%)!important ;
+    padding: 10px;
+    background-color: #343a40;
+    color: white;
+}
 .boton_newsletter{
     font-size: 25px !important;
     padding: 0 !important;
@@ -306,12 +357,13 @@ a:hover{
 }
 
 .ul_footer {
-    list-style: none; 
-    padding-left: 15px;
+    list-style: none;
+    padding-left: 0px; 
 }
 
 .li_footer{
     padding-bottom: 10px;
+    
 }
 
 .text_footer{
@@ -367,6 +419,9 @@ a:hover{
 }
 
 
+.hidden_body{
+    visibility: hidden;
+}
 @media (max-width: 575px) {
     .imagen_banner {
         margin-top: 35px;
@@ -398,6 +453,10 @@ a:hover{
     .boton_info{
         text-align: center;
     }
+    .subrayado {
+        background-image: none;    
+    }
+ 
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
@@ -418,6 +477,10 @@ a:hover{
     .boton_info{
         text-align: center;
     }
+    .subrayado {
+        background-image: none;    
+    }
+ 
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -438,9 +501,7 @@ a:hover{
     width: 21px;
     margin-right: 5px;
     }
-    #div_id_email {
-    width: 110px;
-    }
+
     #div_id_email input::placeholder{
     text-overflow: ellipsis !important;
     font-size: 14px;
@@ -467,6 +528,9 @@ a:hover{
     .busqueda_foto {
         height: 250px;
     }
+    .subrayado {
+        background-image: none;    
+    } 
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -487,9 +551,7 @@ a:hover{
         width: 30px;
         margin-right: 5px;
 }
-    #div_id_email {
-    width: 130px;
-}
+
     .preguntas_frecuentes .about-image img {
     padding-bottom: 5px;
     }
@@ -518,6 +580,10 @@ a:hover{
     .bloque_refugio{
         height: 250px;
     }
+    .contenedor_imagen_refugio{
+        margin-bottom: 0px;
+    }
+
 }
 
 

@@ -5,12 +5,12 @@ from django.contrib.auth.models import User
 
 
 class BusquedaForm(forms.ModelForm):
-    nombreMascota = forms.CharField(widget=forms.TextInput(), label= 'Nombre de tu mascota') 
+    nombreMascota = forms.CharField(widget=forms.TextInput(), label= 'Nombre de tu mascota', max_length=50) 
     especies = [('Perro', 'Perro'),('Gato','Gato')]
     categoria = forms.ChoiceField(label="Especie", choices=especies)
-    raza = forms.CharField()
-    localidad = forms.CharField()
-    provincia = forms.CharField()
+    raza = forms.CharField(max_length=30,)
+    localidad = forms.CharField(max_length=30,)
+    provincia = forms.CharField(max_length=30,)
     cp = forms.CharField(label="C.P",)
     codigoArea = forms.IntegerField(label="Prefijo",)
     telefono = forms.IntegerField(label="Teléfono",)
@@ -22,7 +22,7 @@ class BusquedaForm(forms.ModelForm):
         model = Busqueda
         fields = ['nombreMascota','categoria','raza','localidad','provincia','codigoArea','telefono','celular','descripcion','foto','cp']
 
-class nuevoUsuario(UserCreationForm):
+class NuevoUsuarioForm(UserCreationForm):
     
     class Meta:
         model = User

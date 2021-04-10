@@ -3,103 +3,96 @@
 
 {% load crispy_forms_tags %}
 
-<footer id="footer" class="pb-1 pt-5" >
+<footer id="footer" class="pb-1 pt-5">
     <div class="container" >
         <div class="row">
-            <div class= "col-md-9">                
+            <div class="col-md-12">
                 <div class="row">
-                    <div class= "col-md-5" style="margin-right: 50px;">
-                    
+                    <div class="col-md-4">
                         <h4 class="h4_footer">Sobre nosotros</h4>
-                        <p class="text_footer" >
-                            En esta página vas a poder publicar la búsqueda de tu mascota. 
+                        <p class="text_footer">
+                            En esta página vas a poder publicar la búsqueda de tu mascota.
                             Nosotros vamos a intentar que te reencuentres con tu pequeño ser querido.
                         </p>
                     </div>
-                        <div class= "col-md-4-">
-                            <ul class="ul_footer">
-                                <h4 class="h4_footer">Links</h4>
-                                <li class="li_footer">
-                                    <a  class="text_footer_link " href="/preguntas_frecuentes/">Preguntas frecuentes</a>
-                                </li>
-                                <li class="li_footer">         
-                                    <a class="text_footer_link " href="/quienes_somos/">¿Quiénes somos?</a>                    
-                                </li>
-                                <li class="li_footer">             
-                                    <a  class="text_footer_link "href="/contacto/">Contacto</a>
-                                </li>
-                                <li class="li_footer">                
-                                    <a  class="text_footer_link "href="/asociar_un_refugio/">Asociar un refugio</a>
-                                </li>
-                                <li class="li_footer">
-                                    <a  class="text_footer_link "href="/terminos_y_condiciones/">Términos y condiciones</a>
-                                </li>
+                    <div class="col-md-3">
+                        <ul class="ul_footer">
+                            <h4 class="h4_footer">Links</h4>
+                            <li class="li_footer">
+                                <a class="text_footer_link " href="/preguntas_frecuentes/">Preguntas frecuentes</a>
+                            </li>
+                            <li class="li_footer">
+                                <a class="text_footer_link " href="/quienes_somos/">¿Quiénes somos?</a>
+                            </li>
+                            <li class="li_footer">
+                                <a class="text_footer_link " href="/contacto/">Contacto</a>
+                            </li>
+                            <li class="li_footer">
+                                <a class="text_footer_link " href="/asociar_un_refugio/">Asociar un refugio</a>
+                            </li>
+                            <li class="li_footer">
+                                <a class="text_footer_link " href="/terminos_y_condiciones/">Términos y condiciones</a>
+                            </li>
 
-                            </ul>
-                        </div>
-                </div>
-            </div>                            
-            {% if request.path == '/accounts/login/' %}
-            <div class= "col-sm-12 col-md-3 col-lg-3 col-xl-3">
-
-            <h4 class="h4_footer"> Nuestras redes sociales</h4>
-
-            <div class="container">
-            <a href="https://www.facebook.com/Encontra-a-tu-mascota-106295038071932/" target="_blank">
-                <img src="{% static 'principal/img/facebook.png' %}" class="redes_iconos">
-            </a>
-            <a href="https://www.instagram.com/encontraatumascota.ok/" target="_blank">
-                <img src="{% static 'principal/img/instagram.png' %}" class="redes_iconos">
-            </a>
-
-            <a href="https://api.whatsapp.com/send?phone=+541155913842" target="_blank">
-                <img src="{% static 'principal/img/whatsapp.png' %}" class="redes_iconos">
-            </a>
-            <a href="mailto:encontraatumascota@gmail.com">
-                <img src="{% static 'principal/img/email.png' %}" class="redes_iconos">
-            </a>                
-           </div>
-            </div>
-
-            {% else %}
-            <div class= "col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                <h4 class="h4_footer"> Suscribite</h4>
-                <form class="input-group mb-3" action="" method="post" id="id_newsletter">
-                    {% csrf_token %}
-                    <!-- <input type="email" class="form-control" placeholder="Ingrese email" aria-label="Recipient's username" aria-describedby="button-addon2"> -->
-                    {{newsletter.email_newsletter | as_crispy_field }}
-                    <button class="boton_newsletter" type="button" id="button-addon2" onclick="newsletter()"><i class="fas fa-chevron-circle-right"></i></button>
-
-                    <div class="input-group-append">
+                        </ul>
                     </div>
-                </form>
+                    {% if request.path == '/accounts/login/' %}
+                    <div class="col-md-5">
 
-                <h4 class="h4_footer"> Nuestras redes sociales</h4>
+                        <h4 class="h4_footer"> Nuestras redes sociales</h4>
 
-                <div class="container">
-                <a href="https://www.facebook.com/Encontra-a-tu-mascota-106295038071932/" target="_blank">
-                    <img src="{% static 'principal/img/facebook.png' %}" class="redes_iconos">
-                </a>
-                <a href="https://www.instagram.com/encontraatumascota.ok/" target="_blank">
-                    <img src="{% static 'principal/img/instagram.png' %}" class="redes_iconos">
-                </a>
+                        <div class="container">
+                            <a href="https://www.facebook.com/Encontra-a-tu-mascota-106295038071932/" target="_blank">
+                                <img src="{% static 'principal/img/facebook.png' %}" class="redes_iconos">
+                            </a>
+                            <a href="https://www.instagram.com/encontraatumascota.ok/" target="_blank">
+                                <img src="{% static 'principal/img/instagram.png' %}" class="redes_iconos">
+                            </a>
 
-                <a href="https://api.whatsapp.com/send?phone=+541155913842" target="_blank">
-                    <img src="{% static 'principal/img/whatsapp.png' %}" class="redes_iconos">
-                </a>
-                <a href="mailto:encontraatumascota@gmail.com">
-                    <img src="{% static 'principal/img/email.png' %}" class="redes_iconos">
-                </a>                
-               </div>
-            </div>  
+                            <a href="https://api.whatsapp.com/send?phone=+541155913842" target="_blank">
+                                <img src="{% static 'principal/img/whatsapp.png' %}" class="redes_iconos">
+                            </a>
+                            <a href="mailto:encontraatumascota@gmail.com">
+                                <img src="{% static 'principal/img/email.png' %}" class="redes_iconos">
+                            </a>
+                        </div>
+                    </div>
+                    {% else %}
+                    <div class="container col-md-5">
+                        <h4 class="h4_footer"> Nuestras redes sociales</h4>
+                        <a href="https://www.facebook.com/Encontra-a-tu-mascota-106295038071932/" target="_blank">
+                            <img src="{% static 'principal/img/facebook.png' %}" class="redes_iconos">
+                        </a>
+                        <a href="https://www.instagram.com/encontraatumascota.ok/" target="_blank">
+                            <img src="{% static 'principal/img/instagram.png' %}" class="redes_iconos">
+                        </a>
+
+                        <a href="https://api.whatsapp.com/send?phone=+541155913842" target="_blank">
+                            <img src="{% static 'principal/img/whatsapp.png' %}" class="redes_iconos">
+                        </a>
+                        <a href="mailto:encontraatumascota@gmail.com">
+                            <img src="{% static 'principal/img/email.png' %}" class="redes_iconos">
+                        </a>
+                        <br>
+                        <br>
+                        <h4 class="h4_footer"> Suscribite</h4>
+
+                        <form class="input-group mb-5" action="" method="post" id="id_newsletter">
+                            {% csrf_token %}
+                            {{newsletter.email_newsletter | as_crispy_field }}
+                            <button class="boton_newsletter" type="button" id="button-addon2" onclick="newsletter()"><i
+                                    class="fas fa-chevron-circle-right"></i></button>
+                            <div class="input-group-append">
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
             {% endif %}
-
         </div>
-        <br>
+
     </div>
-</footer>  
-
-
-
-
-
+    <br>
+    </div>
+</footer>

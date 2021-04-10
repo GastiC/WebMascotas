@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from django.core.paginator import Paginator
 from django.contrib.auth import authenticate, login
 from usuarios.models import Busqueda
-from .forms import BusquedaForm, UserCreationForm
+from .forms import BusquedaForm, NuevoUsuarioForm
 from principal.forms import NewsletterForm
 #Models
 from django.contrib.auth.models import User
@@ -29,12 +29,12 @@ def login_view(request):
     return render(request, "principal/templates/registration/login.html")
 
 def sign_in(request):
-    nuevoUsuario = UserCreationForm()
+    nuevoUsuario = NuevoUsuarioForm()
     newsletter = NewsletterForm()
 
     if request.method == 'POST':
         formularioNewsletter = NewsletterForm(data=request.POST)
-        formularioUsuario = UserCreationForm(data=request.POST)
+        formularioUsuario = NuevoUsuarioForm(data=request.POST)
         if formularioNewsletter.is_valid():
             formularioNewsletter.save()
         elif formularioUsuario.is_valid():

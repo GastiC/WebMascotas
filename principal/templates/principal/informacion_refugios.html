@@ -3,37 +3,131 @@
 
 {% block title %} Refugios {% endblock %}
 
-{% block content %} 
+{% block content %}
 
 <br>
-<div class="mt-4 contenedor_imagen pr-0 " >  
-  <div class="text-center fondo_banner p-0">
-      <h1 class="texto_banner"> Refugios</h1>
-  </div>
-<img src="{% static 'principal/img/429416-svetik_2560x1440.jpg' %}" class="imagen_banner">
+<div class="mt-4 contenedor_imagen pr-0 ">
+    <div class="text-center fondo_banner p-0">
+        <h1 class="texto_banner"> Refugios</h1>
+    </div>
+    <img src="{% static 'principal/img/429416-svetik_2560x1440.jpg' %}" class="imagen_banner">
 </div>
 
 <div class="container mt-4 mb-4 ">
     {% for refugio in refugios %}
-    <div class="row">
-        <div class="col-md-6">
-            <img src="{{refugio.foto_refugio.url}}" class="card-img" alt="..." style="height: 235px; margin-bottom: 20px;">
+    <div class="row justify-content-center">
+        <div class="col-xl-5 col-lg-8 contenedor_imagen_refugio b-s">
+            <h3 class="card-title nombre_refugio">{{refugio.nombre}}</h3>
+            <img src="{{refugio.foto_refugio.url}}" class="card-img mb-2" alt="{{refugio.nombre}}"
+                style="border-style: solid; border-width: 3px; border-color: #5d6369; ">
+            <h5>Sobre el refugio </h5>
+            {{refugio.descripcion}}
+
         </div>
-        <div class="col-md-6">
-            <div class="card col-md-12 " style="background-color: white; padding: 10px;">
-            <div class="card-body">
-                <h3 class="card-title">{{refugio.nombre}} </h3>
-                <p class="card-text" style="margin-bottom: 65px; font-size: 17px; ">
-                    {{refugio.descripcion}}
-                </p>
-              </div>       
-            </div>            
-     
+        <div class="col-xl-5 col-lg-8 card_descripcion p-0 b-s">
+            <div class="card col-md-12 p-0" style="background-color: white; height: 100%; width: 100%;">
+                <div class="card-body">
+                    <p class="card-text" style="font-size: 17px; ">
+                    </p>
+
+                    <h5>Información </h5>
+                    <div class="mb5">
+                        <div class="w5 f-left mr-3">
+                            <i class="fas fa-map-marker-alt icono_refugio"></i>
+                        </div>
+                        <div class="w95 ">
+                            {{refugio.direccion}}, {{refugio.localidad}} -
+                            {{refugio.provincia}}
+                        </div>
+                    </div>
+
+                    <div class="mb5">
+                        <div class="w5 f-left mr-3">
+                            <i class="fas fa-phone-square-alt icono_refugio"></i>
+                        </div>
+                        <div class="w95 mb5">
+                            ({{refugio.codigoArea}}) {{refugio.telefono}}
+                        </div>
+                    </div>
+
+                    <div class="mb5">
+
+                    </div>
+                    {% if refugio.facebook != "" %}
+
+                    <div class="mb5">
+                        <div class="w5 f-left mr-3">
+                            <i class="fab fa-facebook-square icono_refugio"></i>
+                        </div>
+                        <div class="w95 mb5">
+                            <a href="https://www.facebook.com/{{refugio.facebook}}" target="_blank"
+                                class="link_refugio">
+                                @{{refugio.facebook}}
+                            </a>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if refugio.instagram != "" %}
+
+                    <div class="mb5">
+                        <div class="w5 f-left mr-3">
+                            <i class="fab fa-instagram icono_refugio"></i>
+                        </div>
+                        <div class="w95 mb5">
+                            <a href="https://www.instagram.com/{{refugio.instagram}}" target="_blank"
+                                class="link_refugio">
+                                @{{refugio.instagram}}
+                            </a>
+                        </div>
+                    </div>
+
+                    {% endif %}
+
+                    <hr>
+
+                    <h5>Mascotas en adopción </h5>
+                    <div class="row" style="text-align: center;">
+                        <div class="card bg-dark text-white col-md-3 p-2 mr-4 ml-3 mt-2">
+                            <img src="{{refugio.foto_refugio.url}}" class="card-img" alt="...">
+                            <h5 class="card-title m-0" style="font-size: medium; text-align: center;" ;>Rocky</h5>
+                        </div>
+                        <div class="card bg-dark text-white  col-md-3  p-2 mr-4 mt-2">
+                            <img src="{{refugio.foto_refugio.url}}" class="card-img" alt="...">
+                            <h5 class="card-title m-0" style="font-size: medium; text-align: center;" ;>Rocky</h5>
+                        </div>
+                        <div class="card bg-dark text-white  col-md-3  p-2 mt-2">
+                            <img src="{{refugio.foto_refugio.url}}" class="card-img" alt="...">
+                            <h5 class="card-title m-0" style="font-size: medium; text-align: center;" ;>Rocky</h5>
+                        </div>
+                    </div>
+                    <div class="row" style="text-align: center;">
+                        <div class="card bg-dark text-white col-md-3 p-2 mr-4 ml-3 mt-2">
+                            <img src="{{refugio.foto_refugio.url}}" class="card-img" alt="...">
+                            <h5 class="card-title m-0" style="font-size: medium; text-align: center;" ;>Rocky</h5>
+                        </div>
+                        <div class="card bg-dark text-white  col-md-3  p-2 mr-4 mt-2">
+                            <img src="{{refugio.foto_refugio.url}}" class="card-img" alt="...">
+                            <h5 class="card-title m-0" style="font-size: medium; text-align: center;" ;>Rocky</h5>
+                        </div>
+                        <div class="card bg-dark text-white  col-md-3  p-2 mt-2">
+                            <img src="{{refugio.foto_refugio.url}}" class="card-img" alt="...">
+                            <h5 class="card-title m-0" style="font-size: medium; text-align: center;" ;>Rocky</h5>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
         </div>
+    </div>
 
 </div>
 
-    {% endfor %}
+</div>
+
+{% endfor %}
 
 </div>
 

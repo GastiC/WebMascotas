@@ -1,18 +1,18 @@
 {% extends "principal/index.html" %}
 {% load static %}
-
 {% block title %} Asociar refugio {% endblock %}
 {% block content %} 
-{% load crispy_forms_tags%}
+{% load crispy_forms_tags %}
+
 <br>
-<div class="mt-4 contenedor_imagen pr-0 " >  
+<div class="mt-4 contenedor_imagen pr-0 mb-3" >  
   <div class="text-center fondo_banner p-0">
       <h1 class="texto_banner"> Asociar un refugio</h1>
   </div>
 <img src="{% static 'principal/img/429416-svetik_2560x1440.jpg' %}" class="imagen_banner">
 </div>
 
-<div class="container col-md-6 pt-4 mb-4 formularios" >
+<div class="container col-md-6 pt-4 mb-4 formularios b-s" >
 
   <form action="" method="POST" id="formulario_refugio" enctype="multipart/form-data" class="pb-4" onkeyup="descripcion_refugio()">
 
@@ -85,7 +85,6 @@
     <div class="container text-center">
     <button type="button" class="btn btn-info btn-md text-center" style="width: 100px;" id="enviar_refugio"; onclick="asociar_refugio()">Enviar</button>
     </div>
-    {{mensaje}}
   </form>
 </div>
 
