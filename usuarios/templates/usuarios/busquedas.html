@@ -3,52 +3,53 @@
 {% block title %} Busquedas {% endblock %}
 {% block content %}
 <br>
-<div class="mt-4 contenedor_imagen pr-0 " >  
+<div class="mt-4 contenedor_imagen pr-0 ">
   <div class="text-center fondo_banner p-0">
-      <h1 class="texto_banner"> Búsquedas</h1>
+    <h1 class="texto_banner"> Búsquedas</h1>
   </div>
-<img src="{% static 'principal/img/429416-svetik_2560x1440.jpg' %}" class="imagen_banner">
+  <img src="{% static 'principal/img/429416-svetik_2560x1440.jpg' %}" class="imagen_banner">
 </div>
 
 
-<div class="container mt-4 mb-4" >
+<div class="container mt-4 mb-4">
   <div class="card-deck">
-      {% for busqueda in page_obj %}
-        <div class="col-md-4 mt-3 mb-3 contenedor_card">
-        <div class="card contenedor_card_margin">
-            <img src="{{busqueda.foto.url}}" class="card-img busqueda_foto" alt="...">
-            <div class="card-body bloque_descripcion">
-                <h5 class="card-title busqueda_nombre">{{busqueda.nombreMascota | capfirst }} - </h3>
-                <h6 class="card-title busqueda_nombre">{{busqueda.raza | title }}</h5>
-              <p class="card-text descripcion_busqueda">{{busqueda.descripcion | capfirst}}</p>
-              <p class="card-text fecha_creado"><small class="text-muted">{{busqueda.creado}}</small></p>
-            </div>
-          </div>  
+    {% for busqueda in page_obj %}
+    <div class="col-md-4 mt-3 mb-3 contenedor_card">
+      <div class="card contenedor_card_margin">
+        <img src="{{busqueda.foto.url}}" class="card-img busqueda_foto" alt="...">
+        <div class="card-body bloque_descripcion">
+          <h5 class="card-title busqueda_nombre">{{busqueda.nombreMascota | capfirst }} - </h3>
+            <h6 class="card-title busqueda_nombre">{{busqueda.raza | title }}
+          </h5>
+          <p class="card-text descripcion_busqueda">{{busqueda.descripcion | capfirst}}</p>
+          <p class="card-text fecha_creado"><small class="text-muted">{{busqueda.creado}}</small></p>
         </div>
-      {% endfor %}
-      
-        </div>
-        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+</div>
 
 <nav aria-label="Page navigation example">
   <ul class="pagination justify-content-center">
     <li class="page-item">
       {% if page_obj.has_previous %}
-        <a class="page-link paginacion" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
-        <span aria-hidden="true" >Anterior</span>
-        </a>
+      <a class="page-link paginacion" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+        <span aria-hidden="true" class="white">Anterior</span>
+      </a>
       {% endif %}
     </li>
-      
-      {% for i in page_obj.paginator.page_range %}
-      <li class="page-item">
-        <a class="page-link paginacion" href="?page={{ i }}"> <span > {{ i }} </span></a>
-      </li>
-      {% endfor %}
+
+    {% for i in page_obj.paginator.page_range %}
+    <li class="page-item">
+      <a class="page-link paginacion" href="?page={{ i }}"> <span class="white"> {{ i }} </span></a>
+    </li>
+    {% endfor %}
     <li class="page-item">
       {% if page_obj.has_next %}
       <a class="page-link paginacion" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
-        <span aria-hidden="true" >Siguiente </span>
+        <span aria-hidden="true" class="white">Siguiente</span>
       </a>
       {% endif %}
     </li>

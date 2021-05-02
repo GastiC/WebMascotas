@@ -45,20 +45,20 @@
       <li class="page-item">
         {% if page_obj.has_previous %}
           <a class="page-link paginacion" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
-          <span aria-hidden="true" class="paginacion">Anterior</span>
+          <span aria-hidden="true" class="white">Anterior</span>
           </a>
         {% endif %}
       </li>
         
         {% for i in page_obj.paginator.page_range %}
         <li class="page-item ">
-          <a class="page-link paginacion" href="?page={{ i }}">  <span class="paginacion"> {{ i }} </span></a>
+          <a class="page-link paginacion" href="?page={{ i }}">  <span class="white"> {{ i }} </span></a>
         </li>
         {% endfor %}
       <li class="page-item">
         {% if page_obj.has_next %}
         <a class="page-link paginacion" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
-          <span aria-hidden="true" class="paginacion">Siguiente </span>
+          <span aria-hidden="true" class="white">Siguiente </span>
         </a>
         {% endif %}
       </li>

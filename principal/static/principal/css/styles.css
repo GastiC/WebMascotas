@@ -1,32 +1,96 @@
+/* ---------------------------------------- Estilos generales ---------------------------------------- */
 #body{
     background-image: url('/static/img/fondoBody.jpg');
     background-size: cover;
-
 }
 
 .asteriskField{
     visibility: hidden !important;
 }
-
-#id_foto_refugio{
-    font-size: 12px !important;
-    vertical-align: bottom !important;
-}
 #id_foto{
     font-size: 12px !important;
 }
 
+a:hover{
+    text-decoration: none !important;
+}
+
+.formularios{
+    background-color: rgba(253, 253, 253, 0.568) !important;  
+    backdrop-filter: blur(10px) !important;
+    color: rgb(65, 65, 65);
+}
+
+.w5 {
+    width: 5%;
+} 
+
+.f-left{
+    float: left;
+}
+
+.w95 {
+    width: 95%;
+} 
+
+.mb5{
+    margin-bottom: 20px;
+}
+
+.b-s {
+    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%)!important ;
+}
+
+.contenedor_card{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+
+}
+
+.pl15{
+    padding-left: 30px !important;
+}
+
+.pr15{
+    padding-right: 30px !important;
+}
+
+.paginacion{
+    background-color: #343a40 !important;
+    color: #F2F0F2 !important;
+    border: 0px !important;
+    margin-right: 3px !important;
+}
+
+.paginacion:hover{
+    background-color: #4a525a !important;
+
+}
+
+.white {
+    color: white;
+}
+
+.boton{
+    background-color: #17a2b8 !important;
+}
+
+.titulo_card {
+    color:rgb(51, 51, 51)
+}
+
+/* ---------------------------------------- Estilos templates app principal ---------------------------------------- */
 #div_id_email_newsletter label{
     display: none;
 }
-
 .imagen_banner {
     width: 100%; 
     background-repeat:no-repeat;
 }
+
 .imagen_banner2 {
     width: 100%; 
-    height: 500px;
+    height: 650px;
     background-repeat:no-repeat;
     background-size: cover; 
     position: absolute;
@@ -38,19 +102,20 @@
     position: relative;
 }
 
-
 .fondo_banner {
     background: rgba(12, 12, 12, 0.6); 
     position: absolute; 
     width: 100%;
 
 }
+
 .fondo_banner2 {
     background-color: rgba(12, 12, 12, 0.7); 
     width: 100%; 
-    height: 500px; 
+    height: 650px; 
     position: relative;
 }
+
 .texto_banner{
     width: 100%;
     color: white; 
@@ -85,12 +150,6 @@
     border-radius: 200px;
 }
 
-
-.busqueda_foto {
-    width: 100%;
-    height: 300px;
-}
-
 .preguntas_frecuentes {
     position: relative; 
 }  
@@ -102,9 +161,11 @@
     backdrop-filter: blur(10px) !important;
     padding-bottom: 20px;
 }
+
 .preguntas_frecuentes_card {
       border: 0;
 }
+
 .preguntas_frecuentes_titulo {
         padding: 0;
         border: 0;
@@ -147,34 +208,27 @@
     padding-left: 10px;
 }
 
-a:hover{
-    text-decoration: none !important;
-}
 .preguntas_frecuentes_titulo a:hover {
     color: rgb(41, 41, 41);
     font-weight: 700;
 }
+
 .respuesta_pregunta {
         padding: 20px 20px 0; 
         font-size: 15px;
         text-align: justify;
         color:rgb(59, 59, 59);
 }
+
 .respuesta_pregunta a{
     font-size: 12px;
     font-weight: 500;
 }
+
 .preguntas_frecuentes .about-image img {
       width: 100%; 
       padding-top: 15px;
 }
-
-.formularios{
-    background-color: rgba(253, 253, 253, 0.568) !important;  
-    backdrop-filter: blur(10px) !important;
-    color: rgb(65, 65, 65);
-}
-
 
 .social_icons{
     color: white;
@@ -187,20 +241,6 @@ a:hover{
     color: grey ;
     margin-right: 15px;
     font-size: 30px;
-}
-
-.w5 {
-    width: 5%;
-} 
-.f-left{
-    float: left;
-}
-
-.w95 {
-    width: 95%;
-} 
-.mb5{
-    margin-bottom: 20px;
 }
 
 .link_refugio{
@@ -219,22 +259,6 @@ a:hover{
     padding: 20px !important;
 }
 
-.b-s {
-    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%)!important ;
-}
-.card_descripcion{
-    max-height: 544px;   
-    margin-left: 15px; 
-}
-
-.nombre_refugio{
-    text-align: center;
-    font-size: 40px;
-    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%)!important ;
-    padding: 10px;
-    background-color: #343a40;
-    color: white;
-}
 .boton_newsletter{
     font-size: 25px !important;
     padding: 0 !important;
@@ -254,28 +278,28 @@ a:hover{
     border-width: 3px;
     border-color: rgba(255,255,255,.5);
     border-style: solid;
+    background-color: grey;
 }
 
-.boton_login{
-    color: white;
+.logo:hover{
+    color: rgba(255,255,255,.75);
+    border-color: rgba(255,255,255,.75);
 }
-.formato_boton_login{
-    border-color:white !important ;
+
+.botones_login{
+    color: rgba(255,255,255,.5) !important;
+    border-color:rgba(255,255,255,.1) !important;
+    border-style: solid !important; 
+    border-width: 3px !important; 
+    border-radius: 5px !important;
+    
+    
 }
+
 .icono_login_navbar {
-    color: white ;
+    color: rgba(255,255,255,.5);
 }
 
-.campos_login{
-    width: 90% !important;
-    display: inline !important;
-}
-
-.icono_login{
-    color: #17a2b8;
-    font-size: 22px;
-
-}
 .page-link{
     color: black !important;
 }
@@ -285,71 +309,10 @@ a:hover{
     margin-right: 15px;
 }
 
-.busqueda_nombre{
-    display: inline;
-    color:rgb(51, 51, 51)
-    
-}
-
-.descripcion_busqueda{
-    margin-top: 10px;
-    font-size: 12px;
-    color:rgb(59, 59, 59)
-}
-
 .descripcion_quienes_somos{
     margin-bottom: 45px; 
     font-size: 17px;
     color:rgb(59, 59, 59)
-}
-
-.descripcion_refugio{
-    font-size: 13px; 
-    margin-bottom: 30px;
-    text-align: justify;
-}
-
-#caracteres_busqueda{
-    font-size: 12px;
-    font-weight: 600;    
-    text-align: right !important;
-}
-
-#caracteres_refugio{
-    font-size: 12px;
-    font-weight: 600;    
-    text-align: right !important;
-}
-
-.imagen_refugio{
-    height: 250px;
-}
-
-.bloque_refugio{
-    padding: 10px;
-    background-color: rgba(253, 253, 253, 0.568) !important;  
-    backdrop-filter: blur(10px) !important;
-}
-
-.contenedor_card{
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-
-}
-
-.contenedor_card_margin{
-    margin-left: 0px !important;
-    margin-right: 0px !important;
-}
-
-.bloque_busqueda{
-    margin-left: 0px !important;
-    margin-right: 0px !important;
-}
-
-.bloque_descripcion{
-    background-color: rgba(100, 100, 100, 0.15) !important;  
-    backdrop-filter: blur(10px) !important;
 }
 
 #footer {
@@ -379,9 +342,107 @@ a:hover{
     font-weight: 600;
 }
 
+.perfil_link{
+    color:rgba(255,255,255,.5) !important;
+}
+
 .h4_footer{
     padding-bottom: 15px; 
     color: #F2F0F2;
+}
+
+/* ---------------------------------------- Estilos templates app refugios ---------------------------------------- */
+
+#id_foto_refugio{
+    font-size: 12px !important;
+    vertical-align: bottom !important;
+}
+
+.card_descripcion{
+    max-height: 544px;   
+    margin-left: 15px; 
+}
+
+.nombre_refugio{
+    text-align: center;
+    font-size: 40px;
+    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%)!important ;
+    padding: 10px;
+    background-color: #343a40;
+    color: white;
+}
+
+.descripcion_refugio{
+    font-size: 13px; 
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+#caracteres_refugio{
+    font-size: 12px;
+    font-weight: 600;    
+    text-align: right !important;
+}
+
+.imagen_refugio{
+    height: 250px;
+}
+
+.bloque_refugio{
+    padding: 10px;
+    background-color: rgba(253, 253, 253, 0.568) !important;  
+    backdrop-filter: blur(10px) !important;
+}
+
+/* ---------------------------------------- Estilos templates app usuarios ---------------------------------------- */
+
+.busqueda_foto {
+    width: 100%;
+    height: 300px;
+}
+
+.campos_login{
+    width: 90% !important;
+    display: inline !important;
+}
+
+.icono_login{
+    color: #17a2b8;
+    font-size: 22px;
+
+}
+
+.busqueda_nombre{
+    display: inline;
+    color:rgb(51, 51, 51)
+    
+}
+
+.descripcion_busqueda{
+    margin-top: 10px;
+    font-size: 12px;
+    color:rgb(59, 59, 59)
+}
+
+#caracteres_busqueda{
+    font-size: 12px;
+    font-weight: 600;    
+    text-align: right !important;
+}
+
+.contenedor_card_margin{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+.bloque_busqueda{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+.bloque_descripcion{
+    background-color: rgba(100, 100, 100, 0.15) !important;  
+    backdrop-filter: blur(10px) !important;
 }
 
 .fecha_creado{
@@ -390,45 +451,40 @@ a:hover{
     right: 10px;
 }
 
-.pl15{
-    padding-left: 30px !important;
+#hint_id_password1, 
+#hint_id_password2{
+    display: none;
+  }
+
+.usuario_titulo{
+    text-align: center;
+    background-color: #43494e !important;
+    color: #fff !important;
+}
+.opciones_usuario{
+    font-size: 20px !important;
 }
 
-.pr15{
-    padding-right: 30px !important;
+.opciones_usuario:hover{
+    background-color: #6c757d !important;
+    color: #fff !important;
+    font-weight: 600 !important;
 }
 
-.paginacion{
-    background-color: #343a40 !important;
-    color: #F2F0F2 !important;
-    border: 0px !important;
-    margin-right: 3px !important;
+.icono_usuario{
+    float: right !important;
+    font-size: 30px !important;
 }
 
-.paginacion:hover{
-    background-color: #4a525a !important;
+/* ---------------------------------------- Media Queries ---------------------------------------- */
 
-}
-
-.boton{
-    background-color: #17a2b8 !important;
-}
-
-.titulo_card {
-    color:rgb(51, 51, 51)
-}
-
-
-.hidden_body{
-    visibility: hidden;
-}
 @media (max-width: 575px) {
     .imagen_banner {
-        margin-top: 35px;
-        height: 120px;
+        margin-top: 5px;
+        height: 150px;
     }
     .imagen_home{
-        margin-top: 35px;
+        margin-top: 10px;
         height: 220px;        
     }
 
@@ -454,8 +510,13 @@ a:hover{
         text-align: center;
     }
     .subrayado {
-        background-image: none;    
+        background-image: none !important;    
     }
+    
+    .ocultar_logo{
+        display: none !important;
+    }
+
  
 }
 

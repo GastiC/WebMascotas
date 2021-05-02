@@ -13,7 +13,6 @@ urlpatterns = [
     path('quienes_somos/', views.quienes_somos),
     path('informacion/', views.informacion),
     path('refugios/<id>/', views.informacion_refugios),
-    path('newsletter/', views.newsletter),
 ]
 
 urlpatterns+=static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

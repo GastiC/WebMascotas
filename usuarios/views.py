@@ -2,11 +2,10 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.core.paginator import Paginator
 from django.contrib.auth import authenticate, login
-from usuarios.models import Busqueda
+from usuarios.models import Busqueda, Usuario
 from .forms import BusquedaForm, NuevoUsuarioForm
 from principal.forms import NewsletterForm
 #Models
-from django.contrib.auth.models import User
 
 def subi_tu_post(request):
     busqueda = BusquedaForm()
@@ -15,7 +14,10 @@ def subi_tu_post(request):
         formulario = BusquedaForm(data=request.POST, files=request.FILES)
         formularioNewsletter = NewsletterForm(data=request.POST)
         if formulario.is_valid():
-            formulario.save()
+            instance = formulario.save(commit=False)
+            instance.usuario_busqueda = request.user
+            instance.save()
+
         elif formularioNewsletter.is_valid():
             formularioNewsletter.save()
         else:
@@ -39,7 +41,7 @@ def sign_in(request):
             formularioNewsletter.save()
         elif formularioUsuario.is_valid():
             formularioUsuario.save()
-            user = authenticate(username=formularioUsuario.cleaned_data['username'], password=formularioUsuario.cleaned_data['password1'])
+            user = authenticate(email=formularioUsuario.cleaned_data['email'], password=formularioUsuario.cleaned_data['password1'])
             login(request, user)
             return redirect(to='../../main_login')
         else:

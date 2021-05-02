@@ -5,32 +5,36 @@
 
 {% block content %} 
 <br>
-<div class="mt-4 contenedor_imagen pr-0 " >  
+<div class="mt-4 contenedor_imagen pr-0 mb-3" >  
   <div class="text-center fondo_banner p-0">
-      <h1 class="texto_banner"> Bienvenido {{ user.username | upper}}</h1>
+      <h1 class="texto_banner"> Bienvenido {{ user.nombre | title}}</h1>
   </div>
 <img src="{% static 'principal/img/429416-svetik_2560x1440.jpg' %}" class="imagen_banner">
 </div>
 
-
 <div class="container mt-4 mb-4">
-
-<div class="row">
-    <div class="col-3"> </div>
-    <div class="col-6">
-        <h3 style="text-align: center;">¿Que deseas hacer?</h3>
+  <div class="row">
+    <div class="col-2"> </div>
+    <div class="col-8">
+      <a class="list-group-item list-group-item-action disabled usuario_titulo" id="list-home-list" href="#" role="tab"><h3 style="text-align: center;">¿Que deseas hacer?</h3></a>
       <div class="list-group" id="list-tab" role="tablist">
-        <a class="btn btn-outline-dark " id="list-home-list" style="margin-bottom: 10px;" href="/change_password/" role="tab" >Cambiar contraseña</a>
-        <a class="btn btn-outline-dark" id="list-profile-list" style="margin-bottom: 10px;" href="/subi_tu_post/" >Publicar una búsqueda</a>
-        <a class="btn btn-outline-dark" id="list-messages-list" style="margin-bottom: 10px;" href="/mi_busqueda/" >Mi búsqueda</a>
-        <a class="btn btn-outline-dark" id="list-settings-list" style="margin-bottom: 10px;" href="/adoptar_una_mascota/" >Adoptar una mascota</a>
-        <a class="btn btn-outline-dark" id="list-settings-list" style="margin-bottom: 10px;" href="/home/" >Cerrar sesión</a>
-
+          <a class="list-group-item list-group-item-action opciones_usuario" id="list-home-list" href="/change_password/" role="tab" aria-controls="home"> Cambiar contraseña <i class="fas fa-angle-right icono_usuario"></i> </a>
+          <a class="list-group-item list-group-item-action opciones_usuario" id="list-home-list" href="/mi_busqueda/" role="tab" aria-controls="home"> Mi búsqueda <i class="fas fa-angle-right icono_usuario"></i> </a>
+          <a class="list-group-item list-group-item-action opciones_usuario" id="list-home-list" href="/adoptar_una_mascota/" role="tab" aria-controls="home"> Adoptar una mascota <i class="fas fa-angle-right icono_usuario"></i> </a>
+          <a class="list-group-item list-group-item-action opciones_usuario" id="list-home-list" href="/subi_tu_post/" role="tab" aria-controls="home"> Publicar una búsqueda <i class="fas fa-angle-right icono_usuario"></i> </a>
+          <a class="list-group-item list-group-item-action opciones_usuario" id="list-home-list" href="/home/" role="tab" aria-controls="home"> Cerrar sesión <i class="fas fa-sign-out-alt icono_usuario"></i> </a>
+        </div>
+    </div>    
+    <div class="col-8">
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">...</div>
+        <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">...</div>
+        <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">...</div>
+        <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...</div>
       </div>
     </div>
-
+    </div>
   </div>
-
 </div>
 
 

@@ -1,7 +1,6 @@
 from django import forms
-from .models import Busqueda
+from .models import Busqueda, Usuario
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import User
 
 
 class BusquedaForm(forms.ModelForm):
@@ -23,7 +22,14 @@ class BusquedaForm(forms.ModelForm):
         fields = ['nombreMascota','categoria','raza','localidad','provincia','codigoArea','telefono','celular','descripcion','foto','cp']
 
 class NuevoUsuarioForm(UserCreationForm):
+    email = forms.EmailField(max_length=60)
     
     class Meta:
-        model = User
-        fields = ['username','first_name', 'last_name','email','password1','password2']
+        model = Usuario
+        fields = ['nombre','apellido','email','confirmacionEmail','username','password1','password2']
+        help_texts = {
+            'username': None,
+            'email': None,
+        }
+
+

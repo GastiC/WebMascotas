@@ -26,7 +26,7 @@ SECRET_KEY = 'b5m5djjp541!^fowa!$pre14^qa27!&tu!3)hu_*n1k$td5+v+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['gastic.pythonanywhere.com','127.0.0.1']
 
 LOGIN_REDIRECT_URL = '../../main_login'
 LOGOUT_REDIRECT_URL = 'home'
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
     'principal',
     'usuarios',
     'refugios',
@@ -81,6 +82,8 @@ TEMPLATES = [
     },
 ]
 
+AUTH_USER_MODEL = 'usuarios.Usuario'
+
 WSGI_APPLICATION = 'webMascotas.wsgi.application'
 
 
@@ -89,8 +92,12 @@ WSGI_APPLICATION = 'webMascotas.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'WebMascotas',
+        'USER': 'postgres',
+        'PASSWORD': 'colaneri12',
+        'HOST': '127.0.0.1',
+        'DATABASE_PORT': '5432',
     }
 }
 
@@ -117,7 +124,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es'
 
 TIME_ZONE = 'UTC'
 
@@ -143,3 +150,13 @@ STATICFILES_FINDERS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+# Email configuration
+
+EMAIL_BACKEND="django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST="smtp.gmail.com"
+EMAIL_USE_TLS=True
+EMAIL_PORT=587
+EMAIL_HOST_USER="encontramimascota@gmail.com"
+EMAIL_HOST_PASSWORD="colaneri12."

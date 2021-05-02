@@ -4,6 +4,7 @@ from django.contrib.auth import authenticate, login
 from refugios.models import Refugio
 from .forms import ContactoForm, NewsletterForm
 from django.core.paginator import Paginator
+from django.core.mail import EmailMessage
 
 
 #Models
@@ -20,23 +21,18 @@ def home (request):
             formulario.save()
         elif formularioNewsletter.is_valid():
             formularioNewsletter.save()
+            email = request.POST.get("email_newsletter")
+            
+            email=EmailMessage("Mensaje de bienvenida desde Encontrá a mi Mascota!!","Gracias por suscribirte en el Newsletter de Encontrá a mi Mascota. \n Te mantendremos informado de todas las novedades","encontramimascota@gmail.com", [email])
+            
+            email.send()
+
         else:
             contacto = formulario
             newsletter = formularioNewsletter     
 
     return render(request, "principal/home.html", {'contacto': contacto,'newsletter': newsletter})
 
-def newsletter(request):
-
-    newsletter = NewsletterForm()
-    if request.method == 'POST':
-        formularioNewsletter = NewsletterForm(data=request.POST)
-        if formularioNewsletter.is_valid():
-            formularioNewsletter.save()
-        else:
-            newsletter = formularioNewsletter     
-
-    return render(request, "principal/newsletter.html", {'newsletter': newsletter })
 
 
 def refugios(request):

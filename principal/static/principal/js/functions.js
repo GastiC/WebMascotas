@@ -39,7 +39,7 @@ function contacto() {
         consulta = document.getElementById("id_consulta").value,
         boton_contacto = document.getElementById("enviar_contacto");
 
-    if (nombre != "" && apellido != "" && expresion.test(email) && expresion.test(emailConf) && prefijo != NaN && telefono != NaN && telefonoAlt != NaN && domicilio != "" && localidad != "" && cp != "" && consulta != "") {
+    if (nombre != "" && apellido != "" && expresion.test(email) && expresion.test(emailConf) && prefijo != "" && telefono != "" && telefono != NaN && telefono <=2147483647 && telefonoAlt != "" && telefonoAlt != NaN && telefonoAlt <=2147483647 && domicilio != "" && localidad != "" && cp != "" && consulta != "") {
         boton_contacto.type = "button"
         Swal.fire({
             title: 'Consulta enviada',
@@ -71,8 +71,10 @@ function asociar_refugio() {
         provincia = document.getElementById("id_provincia").value,
         descripcion = document.getElementById("id_descripcion").value,
         boton_refugio = document.getElementById("enviar_refugio");
+        inputFoto = document.getElementById("id_foto");
+        errorEmailDuplicado = document.getElementById("error_1_id_email");        
 
-    if (nombre != "" && expresion.test(email) && expresion.test(emailConf) && prefijo != NaN && telefono != NaN && telefonoAlt != NaN && domicilio != "" && localidad != "" && provincia != "" && cp != "" && descripcion != "") {
+    if (nombre != "" && expresion.test(email) && expresion.test(emailConf) && prefijo != "" && telefono != "" && telefono != NaN && telefono <=2147483647 && telefonoAlt != NaN && telefonoAlt <=2147483647 && domicilio != "" && localidad != "" && provincia != "" && cp != "" && descripcion != "" ) {
         boton_refugio.type = "button"
         Swal.fire({
             title: 'Refugio asociado',
@@ -95,7 +97,7 @@ function asociar_refugio() {
 function subir_busqueda() {
     let nombre = document.getElementById("id_nombreMascota").value,
         categoria = document.getElementById("id_categoria").value
-    raza = document.getElementById("id_raza").value,
+        raza = document.getElementById("id_raza").value,
         prefijo = document.getElementById("id_codigoArea").value,
         telefono = document.getElementById("id_telefono").value,
         telefonoAlt = document.getElementById("id_celular").value,
@@ -105,7 +107,7 @@ function subir_busqueda() {
         descripcion = document.getElementById("id_descripcion").value,
         boton_busqueda = document.getElementById("enviar_busqueda");
 
-    if (nombre != "" && categoria != "" && raza != "" && prefijo != NaN && telefono != NaN && telefonoAlt != NaN && localidad != "" && provincia != "" && cp != "" && descripcion != "") {
+    if (nombre != "" && categoria != "" && raza != "" && prefijo != "" && telefono != "" && telefono != NaN && telefono <=2147483647 && telefonoAlt != NaN && telefonoAlt != "" && telefonoAlt <=2147483647 && localidad != "" && provincia != "" && cp != "" && descripcion != "") {
         boton_busqueda.type = "button"
         Swal.fire({
             title: 'Búsqueda registrada',

@@ -7,85 +7,61 @@
 {% load crispy_forms_tags %}
 
 <br>
-<div class="container mt-4 contenedor_imagen pr-0 " >  
-  <div class="container text-center fondo_banner p-0">
+<div class="mt-4 contenedor_imagen pr-0 mb-3" >  
+  <div class="text-center fondo_banner p-0">
       <h1 class="texto_banner"> Registrate</h1>
   </div>
 <img src="{% static 'principal/img/429416-svetik_2560x1440.jpg' %}" class="imagen_banner">
 </div>
 
-<div class="container col-md-4 pt-4" style="background-color: white;">
+<div class="container col-lg-5 pt-4 mb-4 formularios b-s">
   <form method="POST" action="{% url 'sign_in' %}">
-    {% csrf_token %}
-    
-    {{ nuevoUsuario | crispy }}
 
-
-      <div class="container text-center">
-      <button type="submit" class="btn btn-dark btn-lg " style="width: 150px;">Registrarse</button>
+  <div class="form-row">
+      <div class="form-group col-md-4 mb-0">
+          {{ nuevoUsuario.nombre | as_crispy_field }}
       </div>
-    </form>
-    <br>
+      <div class="form-group col-md-4 mb-0">
+          {{ nuevoUsuario.apellido | as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ nuevoUsuario.username | as_crispy_field }}
+      </div>
   </div>
-  
-  <br>
 
-NuevoUsuario
-
-<div class="container col-md-4 pt-4" style="background-color: white;">
-<form method="POST" action="{% url 'sign_in' %}">
-  {% csrf_token %}
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <input type="text" class="form-control" id="inputName" placeholder="Nombre" name="nombre" required="true">
-      </div>
-      <div class="form-group col-md-6 ">
-        <input type="text" class="form-control" id="inputSurname" placeholder="Apellido" name="apellido" required="true">
-      </div>
-      </div>        
-
-      <div class="form-row">
-        <div class="form-group col-md-6">
-            <input type="text" class="form-control" id="inputAddress" placeholder= "Domicilio" name="direccion" required="true">
-        </div>
-        <div class="form-group col-md-4">
-            <input type="text" class="form-control" id="inputCity"placeholder="Localidad" name="localidad" required="true">
-        </div>
-        <div class="form-group col-md-2">
-          <input type="text" class="form-control" id="inputZip" placeholder="C.P" name="cp" required="true">   
-        </div>  
+  <div class="form-row">
+    <div class="form-group col-md-6 mb-0">
+          {{ nuevoUsuario.email | as_crispy_field }}
     </div>
+    <div class="form-group col-md-6 mb-0">
+          {{ nuevoUsuario.confirmacionEmail | as_crispy_field }}
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6 mb-0">
+          {{ nuevoUsuario.password1 | as_crispy_field }}
+    </div>
+    <div class="form-group col-md-6 mb-0">
+          {{ nuevoUsuario.password2 | as_crispy_field }}
+    </div>
+  </div>
     <div class="form-row">
-        <div class="form-group col-md-6">
-          <input type="email" class="form-control" id="inputEmail" placeholder="Correo electrónico" name="email" required="true" required="true">
-        </div>
-        <div class="form-group col-md-6">
-          <input type="email" class="form-control" id="inputEmail" placeholder="Confirmar correo electrónico" name="email_again" required="true">
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <input type="password" class="form-control" id="inputEmail" placeholder="Contraseña" name="password" required="true">
-        </div>
-        <div class="form-group col-md-6">
-          <input type="password" class="form-control" id="inputEmail" placeholder="Confirme su contraseña" name="password_confirmation" required="true">
-        </div>
-      </div>
-      <div class="form-group">
+      <div class="form-group col-md-12">
         <div class="form-check">
           <input type="checkbox" class="form-check-input" id="dropdownCheck">
-          <label class="form-check-label" for="dropdownCheck" style="color: black;">
-            Acepto los <a href="/terminos_y_condiciones/">Terminos y condiciones</a>
-          </label>
+            <label class="form-check-label" for="dropdownCheck">
+              Acepto los <a href="../../terminos_y_condiciones">términos y condiciones</a>
+            </label>
         </div>
+      </div>
     </div>
-    <div class="container text-center">
-    <button type="submit" class="btn btn-dark btn-lg " style="width: 150px;">Registrarse</button>
-    </div>
-  </form>
+  <div class="container text-center">
+    <button type="submit" class="btn btn-info btn-lg " style="width: 150px;">Registrarse</button>
+  </div>
   <br>
-</div>
 
-<br>
+</form>
+</div>
 
 {% endblock %}

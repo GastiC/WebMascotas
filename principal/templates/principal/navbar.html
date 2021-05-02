@@ -1,56 +1,75 @@
 <header style="position: fixed;z-index: 100; width: 100%;">
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand" href="/home/">
-      <i class="fas fa-paw logo"></i>
-    </a>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link subrayado" href="/home/">Home <span class="sr-only">(current)</span></a>
-        </li> 
-        <li class="nav-item">
-          <a class="nav-link subrayado" href="/quienes_somos/">¿Quiénes somos?</a>
-        </li>        
-        <li class="nav-item">
-          <a class="nav-link subrayado" href="/busquedas/">Búsquedas</a>
-        </li>        
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle subrayado" href="/refugios/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Refugios</a>
-          <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item bg-dark" href="/refugios/" style="color: whitesmoke;">Refugios activos</a>
-              <a class="dropdown-item bg-dark" href="/asociar_un_refugio/" style="color: whitesmoke;">Asociar un refugio</a>
-              <a class="dropdown-item bg-dark" href="/adoptar_una_mascota/" style="color: whitesmoke;">Adoptar una mascota</a>
-          </div>   
-        </li>
-        <li class="nav-item">
-          <a class="nav-link subrayado" href="/contacto/">Contacto</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link subrayado" href="/subi_tu_post"><strong>Subí tu búsqueda</strong></a>
-        </li>      
-    </div>
-    {% if user.is_authenticated %}
-    <form class="form-inline my-2 my-lg-0">
-      
-      <a href="{% url 'logout' %}" class="btn btn-dark my-2 my-sm-0 formato_boton_login"  type="button"> 
-        <i class="fas fa-sign-out-alt icono_login_navbar"></i>        
-        <span class="boton_login">Cerrar sesión </span> 
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <button class="navbar-toggler botones_login" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand ocultar_logo" href="/home/">
+        <i class="fas fa-paw logo ocultar_logo"></i>
       </a>
-    </form>
-    {% else %}
-    <form class="form-inline my-2 my-lg-0">
-      <a href="{% url 'login' %}" class="btn btn-dark my-2 my-sm-0 formato_boton_login"  type="button"><span class="boton_login">Ingresar </span> <i class="fas fa-sign-in-alt icono_login_navbar"></i></a>
-    </form>
-    {% endif %}
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link subrayado" href="/home/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link subrayado" href="/quienes_somos/">¿Quiénes somos?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link subrayado" href="/busquedas/">Búsquedas</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle subrayado" href="/refugios/" id="navbarDropdown" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Refugios</a>
+            <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item bg-dark" href="/refugios/" style="color: whitesmoke;">Refugios activos</a>
+              <a class="dropdown-item bg-dark" href="/asociar_un_refugio/" style="color: whitesmoke;">Asociar un
+                refugio</a>
+              <a class="dropdown-item bg-dark" href="/adoptar_una_mascota/" style="color: whitesmoke;">Adoptar una
+                mascota</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link subrayado" href="/contacto/">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link subrayado" href="/subi_tu_post"><strong>Subí tu búsqueda</strong></a>
+          </li>
+      </div>
+      {% if user.is_authenticated %}
+
+      <div class="btn-group botones_login">
+        <button type="button" class="btn btn-dark " >
+          <a href="/main_login/" class="perfil_link">
+            {{ user.username | title }}
+          </a>
+        </button>
+        <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split perfil_link" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false" >
+        </button>
+        <div class="dropdown-menu dropdown-menu-right">
+          <a class="dropdown-item" href="/subi_tu_post/" >Publicar una búsqueda</a>
+          <a class="dropdown-item" href="/mi_busqueda/" >Mi búsqueda</a>
+          <a class="dropdown-item" href="/adoptar_una_mascota/" >Adoptar una mascota</a>
+          <a class="dropdown-item" href="/change_password/">Cambiar contraseña</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{% url 'logout' %}" >Cerrar sesión</a>
+        </div>
+      </div>
+
+
+      {% else %}
+      <form class="form-inline botones_login">
+        <a href="{% url 'login' %}" class="btn btn-dark" type="button"><span
+            class="icono_login_navbar">Ingresar </span> <i class="fas fa-sign-in-alt icono_login_navbar"></i></a>
+      </form>
+      {% endif %}
 
 
 
-  </div>
-  </div>
-</nav>
+    </div>
+    </div>
+  </nav>
 </header>

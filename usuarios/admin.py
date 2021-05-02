@@ -3,7 +3,7 @@ from .models import Busqueda, Usuario
 
 class BusquedaAdmin(admin.ModelAdmin):
     readonly_fields = ('creado',)
-    list_display = ['nombreMascota','categoria','usuario','creado']
+    list_display = ['nombreMascota','categoria','usuario_busqueda','creado']
     search_fields = ['nombreMascota','localidad','provincia']
     list_filter = ['categoria',]
     list_per_page = 10
