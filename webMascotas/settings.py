@@ -138,11 +138,6 @@ USE_TZ = False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/static/'
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
@@ -150,7 +145,6 @@ STATICFILES_FINDERS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
 
 # Email configuration
 
@@ -160,3 +154,19 @@ EMAIL_USE_TLS=True
 EMAIL_PORT=587
 EMAIL_HOST_USER="encontramimascota@gmail.com"
 EMAIL_HOST_PASSWORD="colaneri12."
+
+# Configuración para Heroku
+
+# Update database configuration with $DATABASE_URL.
+import dj_database_url  
+db_from_env = dj_database_url.config(conn_max_age=500)  
+DATABASES['default'].update(db_from_env)
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  
+STATIC_URL = '/static/'
+# Extra places for collectstatic to find static files.
+STATICFILES_DIRS = (  
+    os.path.join(BASE_DIR, 'static'),
+)
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
