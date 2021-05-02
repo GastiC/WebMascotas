@@ -1,1 +1,1 @@
-web: gunicorn WebMascotas.wsgi
+web: gunicorn webMascotas.wsgi
