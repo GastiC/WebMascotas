@@ -25,7 +25,7 @@ SECRET_KEY = 'b5m5djjp541!^fowa!$pre14^qa27!&tu!3)hu_*n1k$td5+v+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['gastic.pythonanywhere.com','127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 LOGIN_REDIRECT_URL = '../../main_login'
 LOGOUT_REDIRECT_URL = 'home'
