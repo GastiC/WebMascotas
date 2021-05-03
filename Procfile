@@ -1,1 +1,1 @@
-web: gunicorn webMascotas.wsgi --log-file
+web: gunicorn webMascotas.wsgi --log-file - --log-level debug
