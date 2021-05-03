@@ -1,3 +1,3 @@
-web: gunicorn webMascotas.wsgi:application --log-file - --log-level debug
+web: gunicorn webMascotas.wsgi:webMascotas --log-file - --log-level debug
 python manage.py collectstatic --noinput
 manage.py migrate
