@@ -1,3 +1,3 @@
-web: gunicorn webMascotas.wsgi --log-file
+web: gunicorn webMascotas.wsgi
 python manage.py collectstatic --noinput
 manage.py migrate
