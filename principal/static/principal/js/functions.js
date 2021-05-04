@@ -107,7 +107,7 @@ function subir_busqueda() {
         descripcion = document.getElementById("id_descripcion").value,
         boton_busqueda = document.getElementById("enviar_busqueda");
 
-    if (nombre != "" && categoria != "" && raza != "" && prefijo != "" && telefono != "" && telefono != NaN && telefono <=2147483647 && telefonoAlt != NaN && telefonoAlt != "" && telefonoAlt <=2147483647 && localidad != "" && provincia != "" && cp != "" && descripcion != "") {
+    if (nombre != "" && categoria != "" && raza != "" && prefijo != "" && telefono != "" && telefono != NaN && telefono <=2147483647 && telefonoAlt <=2147483647 && localidad != "" && provincia != "" && cp != "" && descripcion != "") {
         boton_busqueda.type = "button"
         Swal.fire({
             title: 'Búsqueda registrada',
