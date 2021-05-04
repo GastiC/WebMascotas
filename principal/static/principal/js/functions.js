@@ -74,7 +74,7 @@ function asociar_refugio() {
         inputFoto = document.getElementById("id_foto");
         errorEmailDuplicado = document.getElementById("error_1_id_email");        
 
-    if (nombre != "" && expresion.test(email) && expresion.test(emailConf) && prefijo != "" && telefono != "" && telefono != NaN && telefono <=2147483647 && telefonoAlt != NaN && telefonoAlt <=2147483647 && domicilio != "" && localidad != "" && provincia != "" && cp != "" && descripcion != "" ) {
+    if (nombre != "" && expresion.test(email) && expresion.test(emailConf) && prefijo != "" && telefono != "" && telefono != NaN && telefono <=2147483647 && telefonoAlt <=2147483647 && domicilio != "" && localidad != "" && provincia != "" && cp != "" && descripcion != "" ) {
         boton_refugio.type = "button"
         Swal.fire({
             title: 'Refugio asociado',
