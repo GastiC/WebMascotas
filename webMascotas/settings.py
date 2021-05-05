@@ -149,9 +149,9 @@ USE_TZ = False
 
 # Cloudinary stuff
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': config('diobzbetz', default=""),
-    'API_KEY': config('737294397729313', default=""),
-    'API_SECRET': config('1-7bIC3zwj4TcXJaoRA7bjsCEAA', default=""),
+    'CLOUD_NAME': 'diobzbetz',
+    'API_KEY': '737294397729313',
+    'API_SECRET': '1-7bIC3zwj4TcXJaoRA7bjsCEAA',
 }
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
