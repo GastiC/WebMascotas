@@ -16,7 +16,7 @@
 
 <div class="container col-lg-5 pt-4 mb-4 formularios b-s">
   <form method="POST" action="{% url 'sign_in' %}">
-
+  {% csrf_token %}
   <div class="form-row">
       <div class="form-group col-md-4 mb-0">
           {{ nuevoUsuario.nombre | as_crispy_field }}
