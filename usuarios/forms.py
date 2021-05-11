@@ -13,7 +13,7 @@ class BusquedaForm(forms.ModelForm):
     cp = forms.CharField(label="C.P",)
     codigoArea = forms.IntegerField(label="Prefijo",)
     telefono = forms.IntegerField(label="Teléfono",)
-    celular = forms.IntegerField()
+    celular = forms.IntegerField(label="Teléfono alternativo", required=False)
     descripcion = forms.CharField(widget=forms.Textarea(attrs={'rows':5}),max_length=150,)
     foto = forms.ImageField(label="Foto de tu mascota",)
 

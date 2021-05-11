@@ -9,11 +9,10 @@
   <div class="text-center fondo_banner p-0">
       <h1 class="texto_banner"> Contacto</h1>
   </div>
-<img src="{% static 'principal/img/429416-svetik_2560x1440.jpg' %}" class="imagen_banner">
+  <img src="{% static 'principal/img/429416-svetik_2560x1440.jpg' %}" class="imagen_banner">
 </div>
 
-
-<div class="container col-md-6 pt-4 mb-4 formularios b-s" >
+<div class="container col-md-8 col-lg-6 col-xl-6 pt-4 mb-4 formularios b-s" >
 
   <form action="" method="post" id="formulario_contacto" class="pb-4">
 
@@ -66,7 +65,7 @@
       </div>
     </div>
     <div class="container text-center">
-    <button type="button" class="btn btn-info btn-md text-center" style="width: 100px;" id="enviar_contacto"; onclick="contacto()">Enviar</button>
+    <button type="button" class="btn btn-md text-center boton " id="enviar_contacto"; onclick="contacto()">Enviar</button>
     </div>
     {{mensaje}}
   </form>

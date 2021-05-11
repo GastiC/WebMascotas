@@ -8,7 +8,7 @@ class RefugioForm(forms.ModelForm):
     confirmacionEmail = forms.EmailInput()
     codigoArea = forms.IntegerField(label="Prefijo",)
     telefono = forms.IntegerField()
-    celular = forms.IntegerField(required=False)
+    celular = forms.IntegerField(label="Teléfono alternativo", required=False)
     localidad = forms.CharField()
     provincia = forms.CharField()
     cp = forms.CharField(label="C.P",)

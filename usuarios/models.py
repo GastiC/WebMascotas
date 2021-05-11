@@ -84,7 +84,7 @@ class Busqueda(models.Model):
     cp = models.CharField(max_length=15,verbose_name="Código Postal")
     codigoArea = models.IntegerField()
     telefono = models.IntegerField()
-    celular = models.IntegerField(null=True, blank=True)
+    celular = models.IntegerField(verbose_name="Celular", null=True, blank=True)
     usuario_busqueda = models.ForeignKey(Usuario, on_delete=models.CASCADE)
 
     def __str__(self):

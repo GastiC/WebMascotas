@@ -13,7 +13,7 @@
 </div>
 
 
-<div class="container col-md-6 pt-4 mb-4 formularios b-s"  onkeyup="descripcion_busqueda() " >
+<div class="container col-md-8 col-lg-6 col-xl-6 pt-4 mb-4 formularios b-s"  onkeyup="descripcion_busqueda() " >
   <form action="" method="POST" id="formulario_busqueda" enctype="multipart/form-data" class="pb-4">
     {% csrf_token %}
     <div class="form-row">
@@ -67,7 +67,7 @@
     </div>
 
     <div class="container text-center">
-    <button type="button" class="btn btn-info btn-md text-center" style="width: 100px;" id="enviar_busqueda" onclick="subir_busqueda()" >Enviar</button>
+    <button type="button" class="btn boton btn-md text-center" id="enviar_busqueda" onclick="subir_busqueda()" >Enviar</button>
     </div>
     </form>
     </div>

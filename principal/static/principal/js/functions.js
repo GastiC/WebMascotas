@@ -39,7 +39,7 @@ function contacto() {
         consulta = document.getElementById("id_consulta").value,
         boton_contacto = document.getElementById("enviar_contacto");
 
-    if (nombre != "" && apellido != "" && expresion.test(email) && expresion.test(emailConf) && prefijo != "" && telefono != "" && telefono != NaN && telefono <=2147483647 && telefonoAlt != "" && telefonoAlt != NaN && telefonoAlt <=2147483647 && domicilio != "" && localidad != "" && cp != "" && consulta != "") {
+    if (nombre != "" && apellido != "" && expresion.test(email) && expresion.test(emailConf) && prefijo != "" && telefono != "" && telefono != NaN && telefono <=2147483647 && telefonoAlt <=2147483647 && domicilio != "" && localidad != "" && cp != "" && consulta != "") {
         boton_contacto.type = "button"
         Swal.fire({
             title: 'Consulta enviada',
