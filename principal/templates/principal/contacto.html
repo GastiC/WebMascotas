@@ -1,10 +1,7 @@
-{% extends "principal/index.html" %}
-{% load static %}
-{% block title %} Contacto {% endblock %}
-{% block content %} 
-{% load crispy_forms_tags %}
+{% extends "principal/index.html" %} {% load static %} {% block title %}
+Contacto {% endblock %} {% block content %} {% load crispy_forms_tags %}
 
-<br>
+<!-- <br>
 <div class="mt-4 contenedor_imagen pr-0 mb-3" >  
   <div class="text-center fondo_banner p-0">
       <h1 class="texto_banner"> Contacto</h1>
@@ -12,67 +9,90 @@
   <img src="{% static 'principal/img/429416-svetik_2560x1440.jpg' %}" class="imagen_banner">
 </div>
 
-<div class="container col-md-8 col-lg-6 col-xl-6 pt-4 mb-4 formularios b-s" >
+<div class="container col-md-8 col-lg-6 col-xl-6 pt-4 mb-4 formularios b-s" >-->
 
+<br />
+<div class="mt-4 contenedor_imagen pr-0 mb-3">
+    <div class="imagen_banner">
+  <img
+      src="{% static 'principal/img/429416-svetik_2560x1440.jpg' %}"
+      class="imagen_banner"
+    />
+    <div class="fondo_banner p-0">
+    </div>
+    <h1 class="texto_banner"> Contacto</h1>
+
+    </div>
+
+
+</div>
+
+<div class="container col-md-8 col-lg-6 col-xl-6 pt-4 mb-4 formularios b-s">
   <form action="" method="post" id="formulario_contacto" class="pb-4">
-
     {% csrf_token %}
     <div class="form-row">
       <div class="form-group col-md-6 mb-0">
-          {{ contacto.nombre | as_crispy_field }}
+        {{ contacto.nombre | as_crispy_field }}
       </div>
       <div class="form-group col-md-6 mb-0">
-          {{ contacto.apellido | as_crispy_field }}
+        {{ contacto.apellido | as_crispy_field }}
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-group col-md-6 mb-0">
-          {{ contacto.email | as_crispy_field }}
+        {{ contacto.email | as_crispy_field }}
       </div>
       <div class="form-group col-md-6 mb-0">
-          {{ contacto.confirmacionEmail | as_crispy_field }}
+        {{ contacto.confirmacionEmail | as_crispy_field }}
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-group col-md-2 mb-0">
-          {{ contacto.codigoArea | as_crispy_field }}
+        {{ contacto.codigoArea | as_crispy_field }}
       </div>
       <div class="form-group col-md-5 mb-0">
-          {{ contacto.telefono | as_crispy_field }}
+        {{ contacto.telefono | as_crispy_field }}
       </div>
       <div class="form-group col-md-5 mb-0">
         {{ contacto.celular | as_crispy_field }}
-    </div>
+      </div>
     </div>
 
     <div class="form-row">
       <div class="form-group col-md-5 mb-0">
-          {{ contacto.domicilio | as_crispy_field }}
+        {{ contacto.domicilio | as_crispy_field }}
       </div>
       <div class="form-group col-md-4 mb-0">
-          {{ contacto.localidad | as_crispy_field }}
+        {{ contacto.localidad | as_crispy_field }}
       </div>
       <div class="form-group col-md-3 mb-0">
         {{ contacto.cp | as_crispy_field }}
-    </div>
+      </div>
     </div>
 
     <div class="form-row">
       <div class="form-group col-md-12 mb-0">
-          {{ contacto.consulta | as_crispy_field }}
+        {{ contacto.consulta | as_crispy_field }}
       </div>
     </div>
     <div class="container text-center">
-    <button type="button" class="btn btn-md text-center boton " id="enviar_contacto"; onclick="contacto()">Enviar</button>
+      <button
+        type="button"
+        class="btn btn-md text-center boton"
+        id="enviar_contacto"
+        ;
+        onclick="contacto()"
+      >
+        Enviar
+      </button>
     </div>
     {{mensaje}}
   </form>
 </div>
 
-
-  {% endblock %}
+{% endblock %}
 
 <!--
 
@@ -138,4 +158,3 @@
 </div>
 <br>
 -->
-

@@ -144,7 +144,7 @@ function descripcion_refugio() {
 
 
 function onresize_body() {
-    //Resize del banner
+    /* //Resize del banner - Ya no es necesario
 
     let foto = document.getElementsByClassName("imagen_banner")[0];
     let fondo = document.getElementsByClassName("fondo_banner")[0];
@@ -154,7 +154,7 @@ function onresize_body() {
     } else if (window.innerWidth >= 576) {
         total = foto.clientHeight
         fondo.style.minHeight = total + "px";
-    }
+    }*/
 
     //Resize del contenedor de la foto de los refugios
 

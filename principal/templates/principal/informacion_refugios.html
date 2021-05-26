@@ -4,14 +4,18 @@
 {% block title %} Refugios {% endblock %}
 
 {% block content %}
-
-<br>
-<div class="mt-4 contenedor_imagen pr-0 ">
-    <div class="text-center fondo_banner p-0">
-        <h1 class="texto_banner"> Refugios</h1>
-    </div>
-    <img src="{% static 'principal/img/429416-svetik_2560x1440.jpg' %}" class="imagen_banner">
+<br/>
+<div class="mt-4 contenedor_imagen pr-0 mb-3">
+  <div class="imagen_banner">
+    <img
+      src="{% static 'principal/img/429416-svetik_2560x1440.jpg' %}"
+      class="imagen_banner"
+    />
+    <div class="fondo_banner p-0"></div>
+    <h1 class="texto_banner">Refugios</h1>
+  </div>
 </div>
+
 
 <div class="container mt-4 mb-4 ">
     {% for refugio in refugios %}

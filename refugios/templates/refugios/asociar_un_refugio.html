@@ -4,12 +4,17 @@
 {% block content %} 
 {% load crispy_forms_tags %}
 
-<br>
-<div class="mt-4 contenedor_imagen pr-0 mb-3" >  
-  <div class="text-center fondo_banner p-0">
-      <h1 class="texto_banner"> Asociar un refugio</h1>
+
+<br/>
+<div class="mt-4 contenedor_imagen pr-0 mb-3">
+  <div class="imagen_banner">
+    <img
+      src="{% static 'principal/img/429416-svetik_2560x1440.jpg' %}"
+      class="imagen_banner"
+    />
+    <div class="fondo_banner p-0"></div>
+    <h1 class="texto_banner">Asociar un refugio</h1>
   </div>
-<img src="{% static 'principal/img/429416-svetik_2560x1440.jpg' %}" class="imagen_banner">
 </div>
 
 <div class="container col-md-8 col-lg-6 col-xl-6 pt-4 mb-4 formularios b-s" >
